@@ -1,0 +1,142 @@
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import axiosInstance from "./utils/axiosInstance";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { jwtDecode } from "jwt-decode";
+
+import { useDispatch, useSelector } from "react-redux";
+import {
+  startUserLoading,
+  setUserData,
+  setUserDataError,
+  clearUserData,
+} from "./store/userSlice.js";
+import {
+  RequireAuth,
+  OnlyAgentForNotRole8,
+  NonAgentRedirect,
+} from "./utils/ProtectedRoute";
+
+import Login from "./pages/Login";
+import Home from "./modules/client/Home.jsx";
+import Cricket from "./modules/client/pages/Cricket.jsx";
+ 
+//import AgentDashboard from "./modules/agent/Dashjboard.jsx";
+//import AgentProfile from "./modules/agent/profile/Profile.jsx";
+//import BookDetails from "./modules/agent/reports/book-details.jsx";
+//import AccountList from "./modules/agent/users/accounts-list.jsx";
+ 
+//import "bootstrap/dist/css/bootstrap.min.css";
+
+const queryClient = new QueryClient();
+
+function checkTokenAndLogoutIfExpired() {
+  const token = localStorage.getItem("token");
+  const currentPath = window.location.pathname;
+  if (token) {
+    try {
+      const decoded = jwtDecode(token);
+      if (Date.now() >= decoded.exp * 1000) {
+        localStorage.removeItem("token");
+        localStorage.removeItem("user");
+        if (currentPath !== "/") {
+          window.location.href = "/";
+        }
+      }
+    } catch {
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
+      if (currentPath !== "/") {
+        window.location.href = "/";
+      }
+    }
+  }
+}
+
+function App() {
+  const dispatch = useDispatch();
+
+   useEffect(() => {
+    const loadUser = async () => {
+      dispatch(startUserLoading()); // mark as checking
+      try {
+        const res = await axiosInstance.get("/user"); // cookie-based session
+        if (res.status === 200 && res.data) {
+          console.log("User data loaded in App.js:", res.data);
+          dispatch(setUserData(res.data));
+        } else {
+          // no user, mark as initialized anyway
+          dispatch(clearUserData());
+        }
+      } catch (err) {
+        console.error("Error loading user:", err);
+        dispatch(setUserDataError(err.message));
+      }
+    };
+
+    loadUser();
+  }, [dispatch]);
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Routes>
+        {/* Login page */}
+        <Route
+          path="/"
+          element={
+            <LoginRedirectIfAuth>
+              <Login />
+            </LoginRedirectIfAuth>
+          }
+        />
+
+        {/* Agent routes: Only for user_role !== 8 */}
+        <Route element={<RequireAuth />}>
+          <Route element={<OnlyAgentForNotRole8 />}>
+            {/*<Route path="/agent" element={<AgentDashboard />} />
+            <Route path="/agent/dashboard" element={<AgentDashboard />} />
+            <Route path="/agent/reset-password" element={<AgentProfile />} />
+            <Route path="/agent/book-detail" element={<BookDetails />} />
+            <Route path="/agent/accounts" element={<AccountList />} />
+        <Route path="/agent/accounts/chart" element={<AccountList />} />*/}
+            {/* more /agent/* routes can be added here */}
+          </Route>
+        </Route>
+
+        {/* All other routes */}
+        <Route>
+          {/* If user_role !== 8, redirect to /agent/dashboard */}
+          <Route element={<NonAgentRedirect />}>
+            <Route path="/home" element={<Home />} />
+            <Route path="/cricket" element={<Cricket />} />
+            
+            
+             
+            
+          </Route>
+        </Route>
+      </Routes>
+    </QueryClientProvider>
+  );
+}
+
+function LoginRedirectIfAuth({ children }) {
+  const user = localStorage.getItem("user");
+  const token = localStorage.getItem("token");
+  if (user && token) {
+    user.user_role && JSON.parse(user).user_role !== 8
+      ? window.location.replace("/agent/dashboard")
+      : window.location.replace("/home");
+    return null;
+  }
+  return children;
+}
+
+export default App;

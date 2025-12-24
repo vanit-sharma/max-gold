@@ -1,0 +1,52 @@
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+var BzAaaVirtualRatesSchema = new Schema({
+  id: { type: Number, required: true, unique: true },
+  evt_id: { type: String, required: true },
+  evt_evt: { type: String, required: true },
+  evt_od: { type: Date, required: true },
+  evt_close_date: { type: Date, required: true },
+  cat_mid: { type: String, required: true },
+  left_time: { type: Number, required: true, default: 0 },
+  c1: { type: String, required: true },
+  result: { type: String, required: true },
+  evt_status: { type: String, required: true },
+  sid1: { type: String, required: true },
+  rnr1: { type: String, required: true },
+  sid2: { type: String, required: true },
+  rnr2: { type: String, required: true },
+  sid3: { type: String, required: true },
+  rnr3: { type: String, required: true },
+  b1: { type: Number, required: true },
+  l1: { type: Number, required: true },
+  b2: { type: Number, required: true },
+  l2: { type: Number, required: true },
+  b3: { type: Number, required: true },
+  l3: { type: Number, required: true },
+  status1: { type: Number, required: true, default: 0 },
+  status2: { type: Number, required: true, default: 0 },
+  status3: { type: Number, required: true, default: 0 },
+  b4: { type: Number, required: true },
+  b4_status: { type: Number, required: true, default: 0 },
+  b5: { type: Number, required: true },
+  b5_status: { type: Number, required: true, default: 0 },
+  b6: { type: Number, required: true },
+  b6_status: { type: Number, required: true, default: 0 },
+  b7: { type: Number, required: true },
+  b7_status: { type: Number, required: true, default: 0 },
+  b8: { type: Number, required: true },
+  b8_status: { type: Number, required: true, default: 0 },
+  b9: { type: Number, required: true },
+  b9_status: { type: Number, required: true, default: 0 },
+  b10: { type: Number, required: true },
+  b10_status: { type: Number, required: true, default: 0 },
+  stld: { type: Number, required: true, default: 0 },
+  update_at: { type: Date, required: true },
+  diamond_id: { type: String, required: true },
+  counter: { type: Number, required: true, default: 0 },
+  is_bet_place: { type: Number, required: true, default: 0 }
+}, { collection: 'bz_aaa_virtual_rates' });
+BzAaaVirtualRatesSchema.index({ cat_mid: 1 });
+BzAaaVirtualRatesSchema.index({ diamond_id: 1 });
+BzAaaVirtualRatesSchema.index({ evt_id: 1 });
+module.exports = mongoose.model('BzAaaVirtualRates', BzAaaVirtualRatesSchema);
