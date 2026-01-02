@@ -5,6 +5,10 @@ import "../../../assets/agent/css/AdminStyle.css";
 import "../../../assets/css/bootstrap.css";
 import { useDispatch } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const AgentLayout = ({ children }) => {
 
@@ -119,13 +123,12 @@ const AgentLayout = ({ children }) => {
                 <div class="container">
 				<div class="row">
                     <div class="col-sm-4 col-xs-4">
-                        <a href="Dashboard.aspx" class="logo_master">
-						<img id="Image111" class="img-responsive logo" alt="Logo" src="http://betmax.gold/images/betmax.gold.png" style={{filter: "invert(100%);width: 100px"}}/>
+                        <a href="#" class="logo_master">
+						<img id="Image111" class="img-responsive logo" alt="Logo" src="../assets/agent/images/betmax.gold.png"/>
                             
                         </a>
                     </div>
-                    
-
+                     
                     <div class="col-sm-8 col-xs-8">
  
                         <div class="top_drop">
@@ -150,8 +153,8 @@ const AgentLayout = ({ children }) => {
                                     
                                     
                                     Agent : <span id="MasterAgent" class="wallet">Ad Khurram</span></a></li>
-                                        <li><a href="change-password.aspx">Change Password</a>  </li>
-                                        <li><a href="/dl/logout.aspx">Logout</a></li>
+                                        <li><a href="#">Change Password</a>  </li>
+                                        <li><a href="#">Logout</a></li>
                                     </ul>
                                 </li>
 								 
@@ -180,32 +183,51 @@ const AgentLayout = ({ children }) => {
                         <div class="topnav">
                         </div>
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
-                            <ul class="nav navbar-nav">
-                                <li><a href="Dashboard.aspx">Dashboard</a>  </li>
-                                <li><a href="Match.aspx?eventType=4">Match Book</a></li>
-                                <li><a href="Blockmarket.aspx">Block Market</a></li>
-                             
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clients List<b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="addusers.aspx">Add Clients</a>  </li>
-                                        <li><a href="users.aspx">Clients List</a> </li>
-                                    </ul>
-                                </li>
-                                 
-                                <li class="dropdown ">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Report<b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="AccountSummery.aspx">Account Statament</a></li>
-										<li><a href="ChipStatement.aspx">Chip Statement</a></li>
-                                        <li><a href="ProfitLossNew.aspx">Profit/Loss</a>  </li>
-                                        <li><a href="MaxLimit.aspx">Max Limit</a>  </li>
-                                        <li><a href="ChipSummary.aspx">Chip Summary</a>  </li>
-                                    </ul>
-                                </li>
-                                 <li><a href="MarketProfitLoss.aspx">Profit/Loss</a>  </li>
 
-                            </ul>
+                        <Nav variant="pills" activeKey="1">
+      <Nav.Item>
+        <Nav.Link eventKey="1" href="#/home">
+        Dashboard
+        </Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link eventKey="2" title="Item">
+        Match Book
+        </Nav.Link>
+      </Nav.Item>
+
+      <Nav.Item>
+        <Nav.Link eventKey="3" title="Item">
+        Block Market
+        </Nav.Link>
+      </Nav.Item>
+      <NavDropdown title="Clients List" id="nav-dropdown">
+        <NavDropdown.Item eventKey="4.1">Add Clients</NavDropdown.Item>
+        <NavDropdown.Divider />
+        <NavDropdown.Item eventKey="4.2">Clients List</NavDropdown.Item> 
+      </NavDropdown>
+
+      <NavDropdown title="Report" id="nav-dropdown">
+        <NavDropdown.Item eventKey="4.1">Account Statament</NavDropdown.Item>
+        <NavDropdown.Divider />
+        <NavDropdown.Item eventKey="4.2">Chip Statement</NavDropdown.Item> 
+        <NavDropdown.Item eventKey="4.2">Profit/Loss</NavDropdown.Item> 
+        <NavDropdown.Item eventKey="4.2">Max Limit</NavDropdown.Item> 
+        <NavDropdown.Item eventKey="4.2">Chip Summary</NavDropdown.Item> 
+        
+      </NavDropdown>
+
+      <Nav.Item>
+        <Nav.Link eventKey="3" title="Item">
+        Profit/Loss
+        </Nav.Link>
+      </Nav.Item>
+
+
+    </Nav>
+
+
+                            
                         </div>
                     </div>
                 </nav>
