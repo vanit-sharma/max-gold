@@ -36,7 +36,7 @@ import ProfitLoss from "./modules/client/accounts/ProfitLoss.jsx";
 import ButtonValue from "./modules/client/accounts/ButtonValue.jsx";
 import ChangePass from "./modules/client/accounts/ChangePass.jsx";
 import Rules from "./modules/client/accounts/Rules.jsx";
-//import AgentDashboard from "./modules/agent/Dashjboard.jsx";
+import AgentDashboard from "./modules/agent/Dashboard.jsx";
 //import AgentProfile from "./modules/agent/profile/Profile.jsx";
 //import BookDetails from "./modules/agent/reports/book-details.jsx";
 //import AccountList from "./modules/agent/users/accounts-list.jsx";
@@ -108,9 +108,9 @@ function App() {
         {/* Agent routes: Only for user_role !== 8 */}
         <Route element={<RequireAuth />}>
           <Route element={<OnlyAgentForNotRole8 />}>
-            {/*<Route path="/agent" element={<AgentDashboard />} />
+            <Route path="/agent" element={<AgentDashboard />} />
             <Route path="/agent/dashboard" element={<AgentDashboard />} />
-            <Route path="/agent/reset-password" element={<AgentProfile />} />
+            {/*<Route path="/agent/reset-password" element={<AgentProfile />} />
             <Route path="/agent/book-detail" element={<BookDetails />} />
             <Route path="/agent/accounts" element={<AccountList />} />
         <Route path="/agent/accounts/chart" element={<AccountList />} />*/}
