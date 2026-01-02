@@ -6,7 +6,7 @@ import ClientLayout from "../components/layout/ClientLayout";
 import { useSelector } from "react-redux";
 
 
-export default function Cricket() {
+export default function Soccer() {
     //const eventsFromParent = useSelector((state) => state.event);
 
 
@@ -23,7 +23,7 @@ export default function Cricket() {
                                     <div class="box-heading grid_shadow">
                                         <div class="clearfix ng-binding">
 
-                                            <span id="ContentPlaceHolder1_lbl_Event">Cricket</span>
+                                            <span id="ContentPlaceHolder1_lbl_Event">Soccer</span>
                                         </div>
                                     </div>
                                 </div>
@@ -55,8 +55,8 @@ export default function Cricket() {
                                             <div class="market_wrap">
 
                                                 <div class="col-md-7 col-xs-12">
-                                                    <a href="https://betmax.gold/Cricket/22/4/17983/35079740" class="markethover">
-                                                        <h5 class="text_event"><span class="font-600 font-13">Cricket &gt; MI Emirates v Gulf Giants <small class="text-small">12/23/2025 7:30:00 PM</small></span>
+                                                    <a href="https://betmax.gold/Soccer/22/4/17983/35079740" class="markethover">
+                                                        <h5 class="text_event"><span class="font-600 font-13">Soccer &gt; MI Emirates v Gulf Giants <small class="text-small">12/23/2025 7:30:00 PM</small></span>
                                                             <span id="ContentPlaceHolder1_Rpt_Multi_Market_lbl_MatchStatus_0" class="setinplayBtn ng-hide">In-Play</span>
                                                         </h5>
                                                     </a>

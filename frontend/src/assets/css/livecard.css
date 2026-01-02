@@ -1,0 +1,120 @@
+
+.table-tp {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.table-tp th {
+  background: #f5f5f5;
+  font-weight: 600;
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.table-tp td {
+  border: 1px solid #ddd;
+  padding: 0;
+  text-align: center;
+  font-size: 12px;
+}
+.game-name {
+  padding: 10px;
+  text-align: left;
+  font-weight: 500;
+}
+
+.ratetd.back {
+  background: #4db2ff;
+}
+
+.ratetd.back span {
+  color: #696969;
+  font-weight: 600;
+}
+
+.ratetd.lay {
+  background: #ff9fb1;
+}
+
+.ratetd.lay span {
+  color: #696969;
+  font-weight: 600;
+}
+
+.ratetd span:empty::before {
+  content: "";
+  color: #333;
+}
+
+
+.betlink {
+  display: block;
+  padding: 7px 10px;
+  text-decoration: none;
+}
+
+.table-tp tbody tr:hover {
+  background: #f9f9f9;
+}
+.livecard-page {
+  font-size: 13px;
+}
+.hocrickmenu {
+  min-height: 90px;
+  height: 90px;
+  padding-bottom: 0;
+}
+.livecard-layout {
+  display: flex;
+  align-items: flex-start; 
+}
+
+.livecard-sidebar {
+  width: 260px; 
+  flex-shrink: 0;
+}
+
+.livecard-content {
+  flex: 1;
+  margin-left: 10px; 
+}
+.menu-arrow {
+  width: 20px;      
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+  flex-shrink: 0;
+}
+
+.sidebar-menu a {
+  color: #333;
+  text-decoration: none;
+}
+
+.sidebar-menu a:hover {
+  color: #000;
+  background: #f5f5f5;
+}
+
+.sidebar-menu .active > a {
+  color: #000;
+  font-weight: 600;
+}
+.sidebar-submenu {
+  padding-left: 18px;
+}
+
+.sidebar-submenu li {
+  padding: 4px 0;
+}
+.league-title:hover {
+  text-decoration: underline;
+}
+
+.table-tp th:first-child,
+.table-tp td:first-child {
+  width: 300px;  
+  min-width: 850px;
+}

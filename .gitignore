@@ -1,0 +1,15 @@
+node_modules/
+++node_modules/
+.env
+.DS_Store
+*.php
+todo.md
+frontend/src/modules/agent/components/AgentLayout copy.jsx
+frontend/src/modules/agent/popup/credit-debit-popup copy.jsx
+frontend/src/modules/agent/popup/ledger-popup copy.jsx
+frontend/src/modules/agent/users/accounts-list.jsx
+frontend/src/App copy.js
+frontend/src/modules/agent/components/datatable copy.jsx
+frontend/src/modules/agent/components/datatable copy.jsx
+*.bak
+*.backup

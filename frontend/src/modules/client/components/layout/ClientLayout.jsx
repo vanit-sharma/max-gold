@@ -63,103 +63,131 @@ const ClientLayout = ({ children }) => {
   }, [topRightMenuRef]);
 
   return (
-      
-<div class="page_wrappper">
-    <header class="header_wrp">
-    <div class="container"> 
-        <div class="row">
-        <div class="col-sm-5 col-xs-4">
-            <div class="logo text-logo"><a href="https://betmax.gold/home?eventType=4" class="pull-left">
-                <img id="Image111" class="img-responsive" alt="Logo" src="assets/images/betmax.gold.png"/></a>
+
+    <div class="page_wrappper">
+      <header class="header_wrp" style={{ width: "122%" }}>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-5 col-xs-4">
+              <div class="logo text-logo" ><a href="https://betmax.gold/home?eventType=4" class="pull-left" >
+                <img id="Image111" class="img-responsive" alt="Logo" src="assets/images/betmax.gold.png" /></a>
                 <span id="LiveTime"></span>
+              </div>
             </div>
-        </div>
-        <div class="col-sm-7 col-xs-8">
-            <div class="top_drop">
-                <ul class="dropdown-menu n__list" role="menu">
-                   
-                 <li class="dropdown"><a href="javascript:void(0)"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                        <img src="./betmax.gold_files/wallet.png" width="24" class="iconnav"/>&nbsp; 
-                        <span id="lbl_Wallet" class="wallet">0</span><span class="caret"></span></a>
-                        <ul class="dropdown-menu dash__m" role="menu">
-                            <li><a href="javascript:void(0)">
-                                <span class="pull-left wallet">Cr. Limit:</span>
-                                <span id="limit" class="wallet pull-right"></span>
-                            </a></li>
-                            <li><a href="https://betmax.gold/profit-loss">
-                                <span class="pull-left">P/L:</span>
-                                <span id="cash" class="wallet pull-right"></span>
-                            </a></li>
-                            <li><a href="https://betmax.gold/liability">
-                                <span class="pull-left">Liability:</span>
-                                <span id="liability" class="wallet pull-right"></span>
-                            </a></li>
+            <div class="col-sm-7 col-xs-8">
+              <div class="top_drop">
+                <ul class="dropdown-menu" style={{ display: "block", marginLeft: "550px", top: "-3px", backgroundColor: "#ffb80c", border: "none", verticalAlign: "middle" }} role="menu">
+                  <li class="dropdown"><a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    <img src="https://betmax.gold/images/wallet.png" width="24" class="iconnav" />&nbsp;
+                    <span id="lbl_Wallet" class="wallet">0</span></a>
+                    <ul class="dropdown-menu dash__m" role="menu">
+                      <li><a href="javascript:void(0)">
+                        <span class="pull-left wallet">Cr. Limit:</span>
+                        <span id="limit" class="wallet pull-right"></span>
+                      </a></li>
+                      <li><a href="https://betmax.gold/profit-loss">
+                        <span class="pull-left">P/L:</span>
+                        <span id="cash" class="wallet pull-right"></span>
+                      </a></li>
+                      <li><a href="https://betmax.gold/liability">
+                        <span class="pull-left">Liability:</span>
+                        <span id="liability" class="wallet pull-right"></span>
+                      </a></li>
 
-                            <li><a href="javascript:void(0)">
-                                <span class="pull-left">Max Win:</span>
-                                <span id="exposure" class="wallet pull-right"></span>
-                            </a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                        <img src="./betmax.gold_files/usericon.png" width="24" class="iconnav"/>&nbsp;<span id="lbl_username">pkr007</span><span class="caret"></span></a><ul class="dropdown-menu dash__m" role="menu">
+                      <li><a href="javascript:void(0)">
+                        <span class="pull-left">Max Win:</span>
+                        <span id="exposure" class="wallet pull-right"></span>
+                      </a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown"><a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    <img src="https://betmax.gold/images/usericon.png" width="24" class="iconnav" />&nbsp;<span id="lbl_username">pkr007</span></a><ul class="dropdown-menu dash__m" role="menu">
 
-                            <li><a href="https://betmax.gold/chipsummery">Account Statement</a></li>
-							<li><a href="https://betmax.gold/casinoresults">Casino Report History</a></li>
-                            <li><a href="https://betmax.gold/profit-loss">Profit Loss</a></li>							
-                            <li><a href="https://betmax.gold/liability">Bet History</a></li>
-                            <li><a href="https://betmax.gold/editstake">Set Button value</a></li>
-                            <li><a href="https://betmax.gold/chngpswd">Change Password</a></li>
-							  <li><a href="javascript:void(0)" onclick="ShowPopup()">Rules</a></li>
-                            <li><a href="https://betmax.gold/logout.aspx">Signout</a></li>
-                        </ul>
-                    </li>
+                      <li><a href="https://betmax.gold/chipsummery">Account Statement</a></li>
+                      <li><a href="https://betmax.gold/casinoresults">Casino Report History</a></li>
+                      <li><a href="https://betmax.gold/profit-loss">Profit Loss</a></li>
+                      <li><a href="https://betmax.gold/liability">Bet History</a></li>
+                      <li><a href="https://betmax.gold/editstake">Set Button value</a></li>
+                      <li><a href="https://betmax.gold/chngpswd">Change Password</a></li>
+                      <li><a href="javascript:void(0)" onclick="ShowPopup()">Rules</a></li>
+                      <li><a href="https://betmax.gold/logout.aspx">Signout</a></li>
+                    </ul>
+                  </li>
                 </ul>
+              </div>
             </div>
-        </div> 
-            </div>
-</div>
-    </header>
+          </div>
+        </div>
+      </header >
 
-    <div class="topnav" id="myTopnav">
-            <Link
-                  to="/home"
-                  style={{
-                    WebkitTextDecoration: "none",
-                    textDecoration: "none",
-                  }}
-                >
-                  InPlay
-                </Link>  
+      <div class="topnav" id="myTopnav">
+        <Link
+          to="/home"
+          style={{
+            WebkitTextDecoration: "none",
+            textDecoration: "none",
+          }}
+        >
+          InPlay
+        </Link>
 
-                <Link
-                  to="/cricket"
-                  style={{
-                    WebkitTextDecoration: "none",
-                    textDecoration: "none",
-                  }}
-                >
-                  Cricket
-                </Link> 
-        
-        
+        <Link
+          to="/cricket"
+          style={{
+            WebkitTextDecoration: "none",
+            textDecoration: "none",
+          }}
+        >
+          Cricket
+        </Link>
+        <Link
+          to="/soccer"
+          style={{
+            WebkitTextDecoration: "none",
+            textDecoration: "none",
+          }}
+        >
+          Soccer
+        </Link>
+        <Link
+          to="/tennis"
+          style={{
+            WebkitTextDecoration: "none",
+            textDecoration: "none",
+          }}
+        >
+          Tennis
+        </Link>
+        <Link
+          to="/basketball"
+          style={{
+            WebkitTextDecoration: "none",
+            textDecoration: "none",
+          }}
+        >
+          Basketball
+        </Link>
+        <Link
+          to="/livecard"
+          style={{
+            WebkitTextDecoration: "none",
+            textDecoration: "none",
+          }}
+        >
+          Livecard
+        </Link>
+        <a href="javascript:void(0);" style={{ fontSize: "15px" }} class="icon">☰</a>
+      </div>
 
-        <a href="https://betmax.gold/home?eventType=1">Soccer</a> 
-        <a href="https://betmax.gold/home?eventType=2">Tennis</a>     
-        <a href="https://betmax.gold/home?eventType=7522">Basketball</a>
-        <a href="https://betmax.gold/teenpatti" class="rainbow">Live Cards</a>   
-        <a href="javascript:void(0);" style={{fontSize:"15px"}} class="icon">☰</a>
-    </div>
-
-    <div class="notification"> <div class="notifybtn">News</div>
+      <div class="notification"> <div class="notifybtn">News</div>
         <marquee hspace="0" scrollamount="5" behavior="SCROLL" class="notifymark">
-            <p id="shownews"></p></marquee>
-    </div> 
-    <div class=""> 
-   
-     {children}
-    </div>  
-</div> 
+          <p id="shownews"></p></marquee>
+      </div>
+      <div class="">
+
+        {children}
+      </div>
+    </div >
   );
 };
 

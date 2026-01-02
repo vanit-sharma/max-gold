@@ -27,7 +27,15 @@ import {
 import Login from "./pages/Login";
 import Home from "./modules/client/Home.jsx";
 import Cricket from "./modules/client/pages/Cricket.jsx";
- 
+import Tennis from "./modules/client/pages/Tennis.jsx"; 
+import Soccer from "./modules/client/pages/Soccer.jsx"; 
+import Basketball from "./modules/client/pages/Basketball.jsx"; 
+import Livecard from "./modules/client/pages/livecard.jsx";
+import Statement from "./modules/client/accounts/statement.jsx";
+import ProfitLoss from "./modules/client/accounts/ProfitLoss.jsx";
+import ButtonValue from "./modules/client/accounts/ButtonValue.jsx";
+import ChangePass from "./modules/client/accounts/ChangePass.jsx";
+import Rules from "./modules/client/accounts/Rules.jsx";
 //import AgentDashboard from "./modules/agent/Dashjboard.jsx";
 //import AgentProfile from "./modules/agent/profile/Profile.jsx";
 //import BookDetails from "./modules/agent/reports/book-details.jsx";
@@ -116,9 +124,16 @@ function App() {
           <Route element={<NonAgentRedirect />}>
             <Route path="/home" element={<Home />} />
             <Route path="/cricket" element={<Cricket />} />
-            
-            
-             
+            <Route path="/soccer" element={<Soccer />} />
+            <Route path="/tennis" element={<Tennis />} />
+            <Route path="/basketball" element={<Basketball />} />
+            <Route path="/livecard" element={<Livecard />} />
+            <Route path="/statement" element={<Statement />} />
+            <Route path="/ProfitLoss" element={<ProfitLoss />} />
+            <Route path="/ButtonValue" element={<ButtonValue />} />
+            <Route path="/ChangePass" element={<ChangePass />} />
+            <Route path="/Rules" element={<Rules />} />
+
             
           </Route>
         </Route>
