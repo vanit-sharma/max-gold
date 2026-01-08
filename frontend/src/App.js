@@ -37,6 +37,16 @@ import ButtonValue from "./modules/client/accounts/ButtonValue.jsx";
 import ChangePass from "./modules/client/accounts/ChangePass.jsx";
 import Rules from "./modules/client/accounts/Rules.jsx";
 import AgentDashboard from "./modules/agent/Dashboard.jsx";
+import MatchMain from "./modules/agent/matchbook/MatchMain.jsx";
+import BlockMarket from "./modules/agent/BlockMarket.jsx";
+import AddClients from "./modules/agent/clientlist/AddClients.jsx";
+import ClientList from "./modules/agent/clientlist/ClientList.jsx";
+import MarketProfitLoss from "./modules/agent/MarketProfitLoss.jsx";
+import AccState from "./modules/agent/report/AccState.jsx";
+import ChipState from "./modules/agent/report/ChipState.jsx";
+import ReportProLoss from "./modules/agent/report/ReportProLoss.jsx";
+import MaxLimit from "./modules/agent/report/MaxLimit.jsx";
+import ChipSum from "./modules/agent/report/ChipSum.jsx";
 //import AgentProfile from "./modules/agent/profile/Profile.jsx";
 //import BookDetails from "./modules/agent/reports/book-details.jsx";
 //import AccountList from "./modules/agent/users/accounts-list.jsx";
@@ -133,6 +143,16 @@ function App() {
             <Route path="/ButtonValue" element={<ButtonValue />} />
             <Route path="/ChangePass" element={<ChangePass />} />
             <Route path="/Rules" element={<Rules />} />
+            <Route path="/MatchMain" element={<MatchMain />} />
+            <Route path="/BlockMarket" element={<BlockMarket />} />
+            <Route path="/AddClients" element={<AddClients />} />
+            <Route path="/ClientList" element={<ClientList />} />
+            <Route path="/MarketProfitLoss" element={<MarketProfitLoss />} />
+            <Route path="/AccState" element={<AccState />} />
+            <Route path="/ChipState" element={<ChipState />} />
+            <Route path="/ReportProLoss" element={<ReportProLoss />} />
+            <Route path="/MaxLimit" element={<MaxLimit />} />
+            <Route path="/ChipSum" element={<ChipSum />} />
 
             
           </Route>

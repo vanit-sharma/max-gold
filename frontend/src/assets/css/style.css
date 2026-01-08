@@ -239,8 +239,11 @@ tr.Loss.Commission, tr.Winning.Commission {
     font-size: 14px;
     color: #000; 
     padding: 5px 10px;
+    
 }
-
+.account_table thead tr:first-child th {
+  border: 2px solid #eaeaea;
+}
 .txtsports {
     font-size: 12px !important;
     max-width: 200px;
@@ -3490,4 +3493,666 @@ table.table-fancy {
   background-color: #f5f5f5;
   border-top: 1px solid #ddd;
 }
+
+
+.table td,
+.table th {
+  padding: 6px 8px;     
+  line-height: 1.2;     
+  font-size: 13px; 
+  vertical-align: middle;     
+}
+.table .btn-xs {
+  padding: 3px 8px;     
+  line-height: 1.2;
+  font-size: 12px;
+  min-width: 95px;
+  /*text-align: center;
+  display: inline-block;*/
+}
+.match-text {
+  white-space: normal;     
+  word-break: break-word; 
+  display: block;
+}
+.text-center {
+  text-align: center;
+}
+.table tbody td {
+  color: #757474;        
+  font-weight: 500;   
+}
+.table th {
+  color: #fff;      
+  font-weight: 600;
+}
+.table .btn-xs {
+  font-weight: 600;
+  color: #fff;
+}
+.table .font-11 {
+  color: #757474;
+  font-weight: 500;
+  font-size: 13px; 
+}
+.table .red {
+  color: #ff130f;
+  font-weight: 500;
+}
+.table td .btn-xs + .btn-xs {
+  margin-left: 45px;
+}
+.table .btn-success {
+  border-color: #4cae4c;
+}
+.table tbody td a {
+  color: #4083a9;
+  font-weight: 700; 
+}   
+/* add-client */
+.btn.btn-custom-submit  {
+  border-color: #ddd #ddd #cecece;
+  background-color: #f4f4f4;
+  color: #555;
+  background-image: linear-gradient(to bottom, #f4f4f4 0, #eaeaea 100%);
+  text-shadow: none;
+  line-height: 15px;
+  font-weight: 500;
+  padding: 7px 12px;
+  outline: 0;
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #cfcfcf;
+  white-space: nowrap;
+  font-size: 13px;
+  border-radius: 3px;
+  box-shadow: none;
+  width: auto;
+  min-width: 70px;
+} 
+.control-label {
+  color: #696969;
+  font-weight: 700;
+  font-size: 12px; 
+}
+.btn.btn-generate {
+  width: auto;
+  min-width: 160px;          
+  display: inline-block;
+  white-space: nowrap;
+}
+/*client-list*/
+.panel-heading-client{
+    position: relative;
+    background: #fafafa;
+    color: #666;
+    font-size: 13px;
+    border: 0 ;
+    font-weight: 600;
+    padding: 5px 12px;
+}
+.btn-sm-client{
+    font-size: 12px;
+    line-height: 15px;
+    padding: 4px 9px;
+    width: 70px;
+    color: white;
+}
+.table-header-client th {
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+}
+.table-header-client th a {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.btn-xs-client{
+    padding: 2px 5px;
+    font-size: 11px;
+    line-height: 12px;
+    font-weight: 400;
+    border-radius: 2px;
+    width:auto;
+}
+.img-active-client{
+    width: 25px;
+    height: 25px
+}
+.table-client tbody tr td {
+  padding: 6px 8px;
+  vertical-align: middle;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.table-client tbody tr td a,
+.table-client tbody tr td span {
+  font-weight: inherit;
+}
+.table-client tbody td {
+  color: #6b6b6b;
+  font-weight: 500;
+  font-size: 13px;
+  text-align: center;
+}
+.table .btn-xs-client {
+  padding: 3px 8px;     
+  line-height: 1.2;
+  font-size: 12px;
+  min-width: 40px;
+  /*text-align: center;
+  display: inline-block;*/
+}
+.papergrid-client a{
+    box-sizing: border-box;
+    display: inline-block;
+    min-width: 1.5em;
+    padding: 0.5em 1em;
+    margin-left: 4px;
+    text-align: center;
+    text-decoration: none !important;
+    cursor: pointer;
+    border-radius: 2px;
+    font-weight: 700;
+    font-size: 12px;
+}
+/* MARKET-PROFIT-LOSS*/
+.formgroup-market{
+    color: #696969;
+    font-size: 12px;
+}
+.table-market thead th {
+  color: #696969;
+  font-weight: 700;
+  padding: 3px 5px;
+  font-size: 15px;
+  padding: 5px;
+}
+.table-market tbody th {
+  color: #696969;
+  font-weight: 800;
+  padding: 3px 5px;
+  font-size: 15px;
+  padding: 5px;
+}
+.btn-col-market {
+    margin-top: 24px;
+}
+input.hasDatepicker {
+    width: 100% !important;
+}
+
+.btn.btn-primary.btn-sub-market {
+    border-color: #ddd #ddd #cecece;
+    background: repeat-x #f3f1f1f4;
+    color: #292828;
+    text-shadow: none;
+    line-height: 15px;
+    font-weight: 400;
+    padding: 7px 12px;
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 13px;
+    border-radius: 2px;
+    width: 70px;
+    box-shadow: none;
+}
+.market-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+.formgroup-market {
+  display: flex;
+  flex-direction: column;
+}
+.formgroup-market label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #6b6b6b;
+  margin-bottom: 6px;
+}
+.form-control.box-market {
+  width: 100%;
+  height: 32px ;
+  padding: 10px 14px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #555;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  box-shadow: none;
+}
+.form-control.box-market:focus {
+  box-shadow: none;
+  border-color: #cfcfcf;
+}
+.form-control.box-market::placeholder {
+  color: #999;
+  font-weight: 500;
+}
+
+/* Account-Statement*/
+.heading-state h3{
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #696969;
+    letter-spacing: 1px;
+    margin: 0;
+}
+.from-label{
+    color: #696969;
+    font-size: 12px;
+}
+.from-label .form-control {
+    height: 30px;       
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: 600;
+}
+.btn-sub-market {
+    margin-top: 0 !important;
+}
+.head-chip h3{
+    font-size: 26px;
+    font-weight: 600;
+    color: #696969;
+    margin: 0;
+    letter-spacing: 1px;
+}
+.account_table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.account_table thead th.sorting,
+.account_table thead th.sorting_asc,
+.account_table thead th.sorting_desc {
+  color: #ffffff;
+}
+.account_table thead tr:nth-child(2) th {
+  background: #f2f2f2;
+  padding: 10px;
+  border-bottom: 1px solid #505050;
+}
+.account_table tbody tr[data-val="credit"] td {
+    background-color: #63bb5c;
+    color: #fff;
+    padding: 9px 12px;
+    font-weight: 700;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+.account_table tbody td {
+    padding: 12px 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    background-color: #fff;
+    vertical-align: middle;
+}
+.account_table thead tr:nth-child(2) th input {
+  width: 100%;
+  height: 32px;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid #dcdcdc;
+  border-radius: 2px;
+  box-shadow: none;
+}
+.account_table thead tr:nth-child(2) th input:focus {
+  outline: none;
+  border-color: #bcbcbc;
+}
+.account_table tbody td.dataTables_empty {
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 18px;
+  color: #6b6b6b;
+}
+.dataTables_paginate {
+  float: right;
+  margin-top: 10px;
+}
+.dataTables_paginate .paginate_button {
+  padding: 6px 14px;
+  margin-left: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  background: #f2f2f2;
+  border: 1px solid #dcdcdc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.dataTables_info {
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+}
+.account_table thead tr:first-child th {
+    background-color: #505050;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    padding: 6px 8px;
+    border-right: 1px solid #6b6b6b;
+    vertical-align: middle;
+}
+
+.account_table thead tr:first-child th:last-child {
+    border-right: none;
+}
+table.dataTable.account_table thead tr:nth-child(2) th {
+  padding: 8px;
+  background: #f2f2f2;
+  
+}
+table.dataTable.account_table thead tr:nth-child(2) th input {
+  width: 100%;
+    height: 30px;
+    padding: 4px 8px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid #dcdcdc;
+    border-radius: 2px;
+}
+table.dataTable.account_table tbody td.dataTables_empty {
+  text-align: center;
+  padding: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b6b6b;
+  border-top: 2px solid #505050;
+  border-bottom: 2px solid #505050;  
+}
+.dataTables_paginate {
+  margin-top: 12px;   
+}
+.account_table tbody tr:hover td {
+    background-color: inherit !important;
+}
+.dataTables_paginate .paginate_button {
+  padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    background: #f2f2f2;
+    border: 1px solid #dcdcdc;
+    border-radius: 3px;
+    color:#5f5e5eb8;
+    
+}
+.dataTables_paginate .paginate_button:hover {
+    background-color: #4fc3b1;
+    border-color: #4fc3b1;
+    color: #fff;
+}
+
+.dataTables_paginate .paginate_button.current {
+    background-color: #4fc3b1;
+    border-color: #4fc3b1;
+    color: #fff !important;
+}
+
+
+
+/* REPORT PRO-LOSS */
+
+.panel-heading-proloss {
+    position: relative;
+    background: #fafafa;
+    color: #666;
+    font-size: 14px;
+    border: 0;
+    font-weight: 700;
+}
+.loading-proloss{
+    color: #696969;
+    font-size: 12px;
+   /* align-items: center;
+    justify-content: center;*/
+    float: "left";
+    background-color: #fff;
+    /*opacity: 0.7;*/
+    width: 100%;
+    height: 100%;
+    min-height: 100;
+    display: flex;
+    font-weight: 700;
+}
+.text-uppercase-pro{
+    background-color: #000000;
+    color: #efefef;
+    font-weight: 700;
+    font-size: 12px;
+    border: 5px solid transparent;
+    width: 100%;
+    max-width: 100%;
+}
+table.table thead tr.text-uppercase-pro th {
+  padding: 1px 2px;
+  line-height: 1.2;
+    font-size: 15px;  
+  font-weight: 700;
+}
+.btn.btn-success.btn-success-pro {
+  width: 70px;
+  padding: 3px 10px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.2;
+}
+.panel-heading-proloss {
+  margin-bottom: 15px;
+}
+.Elements {
+  margin-bottom: 15px;
+}
+.Elements select,
+.Elements input,
+.Elements a {
+  margin-right: 10px;
+}
+
+/* MaxLimit */
+.main-bar-max h3{
+    color: #696969;
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+input.form-control.form-control-limit{
+    width: 100%;
+    max-width: 420px; 
+    height: 32px;
+    padding: 6px 12px;
+    background-color: #ffffff;
+    border: 1px solid #d6d6d6;
+    border-radius: 3px;
+    border-top-color: #c2c2c2;
+    box-shadow: none;
+    font-weight: 400;
+    font-size: 13px;
+}
+input.form-control.form-control-limit:disabled {
+    background-color: #ffffff;
+    color: #fff;
+}
+label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #696969;
+}
+.settings-form .row {
+  margin-left: -6px;
+  margin-right: -6px;
+}
+.settings-form .col-sm-4 {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.btn.btn-default.btn-limit{
+    text-shadow: none;
+    line-height: 14px;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 7px 12px;
+    color: #6d6b6b;
+    background-color: #f4f4f4;
+    width: 60px;
+    border-color: #cbc7c7;
+    letter-spacing: 1px;
+    text-align: center;
+
+}
+ 
+
+
+/* ChipSum */
+.text-center-sum{
+    text-align: center;
+    color: #696969;
+    letter-spacing: 1px;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+}
+.table-header-sum{
+    background: #5bc0de;
+    border-color: #3da1bf;
+    color: #fff;
+    position: relative;
+    border: 1px solid #e4e4e4;
+    margin-bottom: -1px;
+    padding: 10px 15px;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+}
+.table-caption-sum{
+    color:#fff;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+.table-sum th {
+    background: #4bb1d0;
+    border: 1px solid #3da1bf;
+    border-color: #3da1bf;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+}
+.table {
+    border-collapse: collapse;
+    border-color: #3da1bf;
+}
+.trfooter-blue td {
+    background: #5bc0de;
+    color: #fff;
+    font-weight: 700;
+}
+
+.table-header-red{
+    background: #d86556;
+    border-color: #3da1bf;
+    color: #fff;
+    position: relative;
+    border: 1px solid #e4e4e4;
+    margin-bottom: -1px;
+    padding: 10px 15px;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+
+}
+.table {
+  border-collapse: collapse;
+}
+.trfooter-red td {
+  background: #c85d4f;
+  color: #fff;
+  font-weight: 700;
+}
+.table-loss td {
+  background: #fff;
+}
+.table-loss .btn {
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  color: #555;
+}
+
+.btn.btn-xs.btn-sum {
+    background-color: #f2f2f2;
+    color: #666;
+    border: 1px solid #cfcfcf;
+    border-radius: 3px;
+    padding: 4px 10px; 
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.2;
+    box-shadow: none;
+    text-shadow: none;
+    display: inline-block;
+    width: auto;    
+    min-width: 70px;     
+    text-align: center;
+}
+
+.table.table-bordered tr.table-loss-head td,
+.table.table-bordered tr.table-loss-head th {
+  background-color: #d95342;
+  color: #fff;
+  border-color: #ca4433 !important;
+}
+.table-hover tbody tr.table-loss-head:hover td {
+  background-color: #d95342;
+}
+.table.table-bordered tr.table-loss-head td {
+  background-color: #d95342 !important;
+  color: #fff;
+  border-color: #ca4433 !important;
+}
+.table > thead > tr > th,
+.table > tbody > tr > td {
+  padding: 4px 6px !important;
+  font-size: 12px;
+  line-height: 1.2;
+  vertical-align: middle;
+}
+.table > thead > tr > th {
+  font-size: 13px;
+  padding: 5px 6px !important;
+}
+.table > tbody > tr > td .btn {
+  padding: 2px 8px !important;
+  font-size: 11px;
+  line-height: 1.2;
+}
+.table-hover > tbody > tr:hover > td {
+  background-color: transparent !important;
+}
+.table th:last-child,
+.table td:last-child {
+  width: 90px;          
+  min-width: 90px;
+  max-width: 90px;
+  text-align: center;
+  white-space: nowrap;
+}
+
 

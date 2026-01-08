@@ -13,10 +13,10 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 const AgentLayout = ({ children }) => {
 
     return (
-        
+
         <div class="" id="wrap">
-        <style>
-        {` 
+            <style>
+                {` 
          .table-responsive {
             overflow: auto;
             max-height: initial;
@@ -121,55 +121,55 @@ const AgentLayout = ({ children }) => {
             </style>
             <div class="header-wrap">
                 <div class="container">
-				<div class="row">
-                    <div class="col-sm-4 col-xs-4">
-                        <a href="#" class="logo_master">
-						<img id="Image111" class="img-responsive logo" alt="Logo" src="../assets/agent/images/betmax.gold.png"/>
-                            
-                        </a>
-                    </div>
-                     
-                    <div class="col-sm-8 col-xs-8">
- 
-                        <div class="top_drop">
-                            <ul class="dropdown-menu n__list" role="menu">
-                                
-                        
-                           
-                                <li><a href="javascript:void(0)">
-                                    
-                                    <img src="/images/wallet.png" width="24" class="iconnav"/>&nbsp;
-                                    <span id="lbl_Wallet" class="wallet">50000.00</span></a></li>
-                        
-                                <li class="dropdown"><a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    <img src="/images/usericon.png" width="24" class="iconnav"/>&nbsp;<span id="lbl_username">Asad</span><span class="caret"></span></a>
-									<ul class="dropdown-menu dash__m" role="menu">
-									<li>
-								  
-								
-								<a href="javascript:void(0)">Share :
-                                <span id="myshare" class="">80</span></a></li>
-                                <li><a href="javascript:void(0)">
-                                    
-                                    
-                                    Agent : <span id="MasterAgent" class="wallet">Ad Khurram</span></a></li>
-                                        <li><a href="#">Change Password</a>  </li>
-                                        <li><a href="#">Logout</a></li>
-                                    </ul>
-                                </li>
-								 
-                   
-                                
-                            </ul>
+                    <div class="row">
+                        <div class="col-sm-4 col-xs-4">
+                            <a href="#" class="logo_master">
+                                <img id="Image111" class="img-responsive logo" alt="Logo" src="../assets/agent/images/betmax.gold.png" />
+
+                            </a>
                         </div>
-						</div>
+
+                        <div class="col-sm-8 col-xs-8">
+
+                            <div class="top_drop">
+                                <ul class="dropdown-menu n__list" role="menu">
+
+
+
+                                    <li><a href="javascript:void(0)">
+
+                                        <img src="/images/wallet.png" width="24" class="iconnav" />&nbsp;
+                                        <span id="lbl_Wallet" class="wallet">50000.00</span></a></li>
+
+                                    <li class="dropdown"><a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                        <img src="/images/usericon.png" width="24" class="iconnav" />&nbsp;<span id="lbl_username">Asad</span><span class="caret"></span></a>
+                                        <ul class="dropdown-menu dash__m" role="menu">
+                                            <li>
+
+
+                                                <a href="javascript:void(0)">Share :
+                                                    <span id="myshare" class="">80</span></a></li>
+                                            <li><a href="javascript:void(0)">
+
+
+                                                Agent : <span id="MasterAgent" class="wallet">Ad Khurram</span></a></li>
+                                            <li><a href="#">Change Password</a>  </li>
+                                            <li><a href="#">Logout</a></li>
+                                        </ul>
+                                    </li>
+
+
+
+                                </ul>
+                            </div>
+                        </div>
 
                     </div>
                 </div>
             </div>
             <div id="top" class="nav-master">
                 <nav class="navbar navbar-inverse navbar-static-top">
-				
+
                     <div class="col-lg-12">
                         <header class="navbar-header">
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -184,50 +184,50 @@ const AgentLayout = ({ children }) => {
                         </div>
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
 
-                        <Nav variant="pills" activeKey="1">
-      <Nav.Item>
-        <Nav.Link eventKey="1" href="#/home">
-        Dashboard
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="2" title="Item">
-        Match Book
-        </Nav.Link>
-      </Nav.Item>
+                            <Nav variant="pills" activeKey="1">
+                                <Nav.Item>
+                                    <Nav.Link eventKey="1" href="#/home">
+                                        Dashboard
+                                    </Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Nav.Link eventKey="2" title="Item">
+                                        Match Book
+                                    </Nav.Link>
+                                </Nav.Item>
 
-      <Nav.Item>
-        <Nav.Link eventKey="3" title="Item">
-        Block Market
-        </Nav.Link>
-      </Nav.Item>
-      <NavDropdown title="Clients List" id="nav-dropdown">
-        <NavDropdown.Item eventKey="4.1">Add Clients</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item eventKey="4.2">Clients List</NavDropdown.Item> 
-      </NavDropdown>
+                                <Nav.Item>
+                                    <Nav.Link eventKey="3" title="Item">
+                                        Block Market
+                                    </Nav.Link>
+                                </Nav.Item>
+                                <NavDropdown title="Clients List" id="nav-dropdown">
+                                    <NavDropdown.Item eventKey="4.1">Add Clients</NavDropdown.Item>
+                                    <NavDropdown.Divider />
+                                    <NavDropdown.Item eventKey="4.2">Clients List</NavDropdown.Item>
+                                </NavDropdown>
 
-      <NavDropdown title="Report" id="nav-dropdown">
-        <NavDropdown.Item eventKey="4.1">Account Statament</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item eventKey="4.2">Chip Statement</NavDropdown.Item> 
-        <NavDropdown.Item eventKey="4.2">Profit/Loss</NavDropdown.Item> 
-        <NavDropdown.Item eventKey="4.2">Max Limit</NavDropdown.Item> 
-        <NavDropdown.Item eventKey="4.2">Chip Summary</NavDropdown.Item> 
-        
-      </NavDropdown>
+                                <NavDropdown title="Report" id="nav-dropdown">
+                                    <NavDropdown.Item eventKey="4.1">Account Statament</NavDropdown.Item>
+                                    <NavDropdown.Divider />
+                                    <NavDropdown.Item eventKey="4.2">Chip Statement</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="4.2">Profit/Loss</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="4.2">Max Limit</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="4.2">Chip Summary</NavDropdown.Item>
 
-      <Nav.Item>
-        <Nav.Link eventKey="3" title="Item">
-        Profit/Loss
-        </Nav.Link>
-      </Nav.Item>
+                                </NavDropdown>
 
-
-    </Nav>
+                                <Nav.Item>
+                                    <Nav.Link eventKey="3" title="Item">
+                                        Profit/Loss
+                                    </Nav.Link>
+                                </Nav.Item>
 
 
-                            
+                            </Nav>
+
+
+
                         </div>
                     </div>
                 </nav>
@@ -236,11 +236,11 @@ const AgentLayout = ({ children }) => {
             <div>
                 {children}
             </div>
-            
 
- 
 
- 
+
+
+
 
         </div>
     );
