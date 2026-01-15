@@ -1,7 +1,29 @@
+import { useState } from "react";
 import AgentLayout from "../components/AgentLayout";
 import "../../../assets/css/style.css";
+import Totalbook from "../market_analysis/totalbook";
 
 export default function MatchMain() {
+    const [matchStatus, setMatchStatus] = useState("running");
+    const [matchOpen, setMatchOpen] = useState(false);
+    const [sessionOpen, setSessionOpen] = useState(false);
+    const [showTotalBook, setShowTotalBook] = useState(false);
+    const [selectedMatchId, setSelectedMatchId] = useState(null);
+
+
+    {/*const openTotalBook = (url) => {
+        document.getElementById("totalBookFrame").src = url;
+        window.$("#totalBookModal").modal("show"); // Bootstrap modal
+    };*/}
+
+    const openTotalBook = (mid) => {
+        setSelectedMatchId(mid);
+        setShowTotalBook(true);
+    };
+    const closeTotalBook = () => {
+        setShowTotalBook(false);
+        setSelectedMatchId(null);
+    };
     return (
         <AgentLayout>
             <div class="head" style={{ display: "inline-block" }}>
@@ -13,7 +35,7 @@ export default function MatchMain() {
             <div class="col-sm-12">
                 <div id="vtab" class="order-tabs">
                     <ul>
-                        <li><a href="Match.aspx?eventType=4"><span> <img src="https://betmax.gold/images/cricket.png" class="spicons" /> Cricket</span></a></li>
+                        <li><a href="Match.aspx?eventType=4" ><span> <img src="https://betmax.gold/images/cricket.png" class="spicons" /> Cricket</span></a></li>
                         <li><a href="Match.aspx?eventType=1"><span><img src="https://betmax.gold/images/football.png" class="spicons" /> Soccer</span></a></li>
                         <li><a href="Match.aspx?eventType=2"><span><img src="https://betmax.gold/images/tennis.png" class="spicons" /> Tennis</span></a></li>
                         <li><a href="Match.aspx?eventType=7522"><span><img src="../images/basketball.png" class="spicons" /> BasketBall</span></a></li>
@@ -36,13 +58,13 @@ export default function MatchMain() {
                                         <tbody>
                                             <tr>
                                                 <td>
-                                                    <input id="ContentPlaceHolder1_RadioButtonList1_0" type="radio" name="ctl00$ContentPlaceHolder1$RadioButtonList1" value="1" checked="checked" /><label for="ContentPlaceHolder1_RadioButtonList1_0">Running Matches</label>
+                                                    <input id="running" type="radio" name="matchStatus" value="running" checked={matchStatus === "running"} onChange={(e) => setMatchStatus(e.target.value)} /><label htmlFor="running">Running Matches</label>
                                                 </td>
                                                 <td>
-                                                    <input id="ContentPlaceHolder1_RadioButtonList1_1" type="radio" name="ctl00$ContentPlaceHolder1$RadioButtonList1" value="3" /*onclick="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$RadioButtonList1$1\',\'\')', 0)"*/ /><label for="ContentPlaceHolder1_RadioButtonList1_1">Suspended Matches</label>
+                                                    <input id="suspended" type="radio" name="matchStatus" value="suspended" checked={matchStatus === "suspended"} onChange={(e) => setMatchStatus(e.target.value)} /><label htmlFor="suspended">Suspended Matches</label>
                                                 </td>
                                                 <td>
-                                                    <input id="ContentPlaceHolder1_RadioButtonList1_2" type="radio" name="ctl00$ContentPlaceHolder1$RadioButtonList1" value="2" /*onclick="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$RadioButtonList1$2\',\'\')', 0)"*/ /><label for="ContentPlaceHolder1_RadioButtonList1_2">Completed Matches</label>
+                                                    <input id="completed" type="radio" name="matchStatus" value="completed" checked={matchStatus === "completed"} onChange={(e) => setMatchStatus(e.target.value)} /><label htmlFor="completed">Completed Matches</label>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -78,25 +100,60 @@ export default function MatchMain() {
                                                     <td>1/2/2026 7:30:00 PM</td>
                                                     <td className="text-center">
                                                         <span></span>
-                                                        <a id="ContentPlaceHolder1_dataTable_lnkmatch_0" class=" btn-success btn-xs" style={{ borderRadius: "2px", borderColor: "#4cae4c" }}><b>Open</b></a>
-                                                        <a id="ContentPlaceHolder1_dataTable_lnksession_0" class=" btn-success btn-xs" style={{ borderRadius: "2px", borderColor: "#4cae4c" }}><b>Open</b></a>
+                                                        <a id="ContentPlaceHolder1_dataTable_lnkmatch_0" class=" btn-success btn-xs" style={{ borderRadius: "2px", borderColor: "#4cae4c" }} onClick={(e) => {
+                                                            e.preventDefault(); setMatchOpen(!matchOpen);
+                                                        }}><b>{matchOpen ? "Closed" : "Open"}</b></a>
+                                                        <a id="ContentPlaceHolder1_dataTable_lnksession_0" class=" btn-success btn-xs" style={{ borderRadius: "2px", borderColor: "#4cae4c" }} onClick={(e) => {
+                                                            e.preventDefault(); setSessionOpen(!sessionOpen);
+                                                        }}><b>{sessionOpen ? "Closed" : "Open"}</b></a>
                                                     </td>
                                                     <td>
                                                         <span id="ContentPlaceHolder1_dataTable_lbl_result_0" class="red">Match Running</span>
                                                     </td>
                                                     <td>
-                                                        <a id="ContentPlaceHolder1_dataTable_btn_matchbook_0" class="btn-success btn-xs" style={{ borderRadius: "2px", borderColor: "#4cae4c" }}><b>Match Book</b></a>
+                                                        <a href="matchbook" class="btn-success btn-xs" style={{ borderRadius: "2px", borderColor: "#4cae4c" }}><b>Match Book</b></a>
                                                     </td>
                                                     <td>
-                                                        <a href="TossBook.aspx?event=32125" class=" btn-success btn-xs" style={{ borderRadius: "2px", borderColor: "#4cae4c" }}><b>Toss Book</b></a>
-                                                    </td><td>
-                                                        <a href="../include/mspf.aspx?mid=32125" class=" btn-success btn-xs" onclick="toggleOptionalreport(this, 'content_holder'); document.getElementById('opaque').style.display='block';" target="contentFrame" style={{ borderRadius: "2px", borderColor: "#4cae4c" }}><b>Total Book</b></a>
-                                                    </td><td>
-                                                        <a href="ClientProfitLoss.aspx?mid=32125" class=" btn-success btn-xs" style={{ borderRadius: "2px", borderColor: "#4cae4c" }}><b>Client Profit Loss</b></a>
+                                                        <a href="tossbook" class=" btn-success btn-xs" style={{ borderRadius: "2px", borderColor: "#4cae4c" }}><b>Toss Book</b></a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" class=" btn-success btn-xs" style={{ borderRadius: "2px", borderColor: "#4cae4c" }} onClick={(e) => {
+                                                            e.preventDefault(); openTotalBook(32125);
+                                                        }}><b>Total Book</b></a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="clientpl" class=" btn-success btn-xs" style={{ borderRadius: "2px", borderColor: "#4cae4c" }}><b>Client Profit Loss</b></a>
                                                     </td>
                                                 </tr>
                                             </tbody>
                                         </table>
+
+
+
+                                        <div class="modal fade" id="totalBookModal" tabindex="-1">
+                                            <div class="modal-dialog modal-lg">
+                                                <div class="modal-content">
+
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title">Total Book</h4>
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    </div>
+
+                                                    <div class="modal-body" style={{ padding: "0" }}>
+                                                        <iframe
+                                                            id="totalBookFrame"
+                                                            src=""
+                                                            style={{ width: "100%", height: "500px", border: "none" }}>
+                                                        </iframe>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
                                     </div>
                                 </div>
                             </div>
@@ -104,6 +161,12 @@ export default function MatchMain() {
                     </div>
                 </div>
             </div>
+            <Totalbook
+                isOpen={showTotalBook}
+                onClose={closeTotalBook}
+                matchId={selectedMatchId}
+            />
+
         </AgentLayout>
     );
 }

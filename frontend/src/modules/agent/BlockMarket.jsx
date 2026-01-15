@@ -34,7 +34,7 @@ export default function BlockMarket() {
                                                     <input type="search" class="" placeholder="" aria-controls="myTable" />
                                                 </label>
                                             </div>
-                                            <div style={{ padding: "30px 50px" }}>
+                                            <div >
                                                 <table id="myTable" class="table dataTable no-footer" role="grid" aria-describedby="myTable_info">
                                                     <thead >
                                                         <tr role="row" style={{ backgroundColor: "#505050" }}>
@@ -49,7 +49,7 @@ export default function BlockMarket() {
                                                     <tbody>
                                                         <tr role="row" class="odd">
                                                             <td>
-                                                                <a id="ContentPlaceHolder1_rpttype_lnksports_0" href="#">Cricket</a>
+                                                                <a id="ContentPlaceHolder1_rpttype_lnksports_0" href="#" >Cricket</a>
                                                             </td>
                                                             <td class="text-center sorting_1">
                                                                 <input type="hidden" name="ctl00$ContentPlaceHolder1$rpttype$ctl00$hdnstatus" id="ContentPlaceHolder1_rpttype_hdnstatus_0" value="True" />

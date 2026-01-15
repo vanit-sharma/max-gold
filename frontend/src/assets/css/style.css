@@ -3938,7 +3938,6 @@ table.dataTable.account_table tbody td.dataTables_empty {
     color: #efefef;
     font-weight: 700;
     font-size: 12px;
-    border: 5px solid transparent;
     width: 100%;
     max-width: 100%;
 }
@@ -4154,5 +4153,385 @@ label {
   text-align: center;
   white-space: nowrap;
 }
+
+
+
+/* matchbook */
+.panel-heading-matchbook{
+    background: #fafafa;
+    color: #666;
+    font-size: 15px;
+    font-weight: 700 !important;
+    text-align: center;
+    line-height: 1.6;
+    border: none;
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+.rowkh-matchbook td{
+    color: #000 !important;
+}
+.panel-heading-matchbook span {
+    text-decoration: none;
+    font-weight: 700;
+}
+.table-matchbook {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse; 
+}
+.table-matchbook th{
+    color: #f0f0f0;
+    background-color: #000;
+    font-weight: 900 !important;
+    font-size: 11px !important;
+    text-align: center;
+    vertical-align: middle;
+    padding: 3px 0px;
+    white-space: normal;
+    word-break: break-word;
+}
+.table_marketData thead th.bakLayTd {
+    padding: 0 !important;
+}
+
+.table_marketData thead th.bakLayTd .tt_thead {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+}
+
+.table-matchbook th:first-child,
+.table-matchbook td:first-child {
+    width: 90px;
+}
+.table-matchbook td {
+    padding: 12px 8px;
+    vertical-align: middle;
+}
+.top-heading-matchbook{
+    background: #3b5160;
+    padding: 10px 7px;
+    color: #fff;
+    font-weight: 700 !important;
+    line-height: 1.4;
+    font-size: 14px;
+}
+.matchbook-wrapper {
+    width: 100%; 
+}
+#accordion2 .panel-heading {
+    background-color: #fff !important;
+    border: 1px solid #e5e5e5;
+}
+#accordion2 .panel-heading .panel-title a {
+    background-color: transparent !important;
+    color: #696969 !important;
+    display: block;
+    padding: 10px 12px;
+    text-decoration: none;
+}
+#accordion2 .panel-heading .panel-title a:hover,
+#accordion2 .panel-heading .panel-title a:focus {
+    background-color: #f0f0f0 !important;
+    color: #696969 !important;
+}
+.panel-title a{
+    color: #696969;
+    font-weight: 600;
+}
+.btn-refresh{
+    padding: 1px 6px !important;
+    font-size: 13px;
+    border: 1px solid #cfcfcf;
+    background: #f4f4f4 !important;
+    color: #555;
+    line-height: 12px;
+    box-shadow: none;
+    text-shadow: none;
+    font-weight: 500;
+    border-radius: 3px;
+    display: inline-block;
+    width: 60px;
+}
+.btn-refresh:hover,
+.btn-refresh:focus {
+    background-color: #e6e6e6 !important;
+    border-color: #bdbdbd;
+    color: #333;
+    text-decoration: none;
+}
+.header-matchbook{
+    color:#696969;
+    font-size: 14px;
+    font-weight: 700;
+}
+.table_marketData {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    padding: 2px 10px;
+    border: 0 !important;
+    border-top: 1px solid #f9f9f9;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+}
+.table_marketData thead th {
+    font-weight: 700;
+    font-size: 14px;
+    color: #000;
+    background: #fafafa;
+}
+.table_marketData thead th:first-child {
+    text-align: left;
+    padding-left: 12px;
+}
+
+
+
+
+
+/* toss book */
+.panel-heading-toss{
+    font-weight: 900;
+    line-height: 1.1;
+    color: #696969;
+    font-size: 28px;
+}
+.panel-heading-toss h3,
+.panel-heading-toss h3 span {
+    font-weight: 600;
+    font-size: 23px;
+    padding: 10px;
+}
+.panel.panel-alert {
+    margin-bottom: 0;
+}
+.panel.panel-alert .panel-heading {
+    padding-bottom: 4px 8px;
+}
+.btn.btn-book{
+    width: 90px;
+    padding: 4px 10px !important;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.table-toss,
+table.table-toss th,
+table.table-toss td{
+    color: #696969 ;
+    font-size: 11px;
+    letter-spacing: 0px;
+    text-align: center;
+}
+.table-toss th {
+    font-weight: 700;
+}
+.table-toss thead th span {
+    font-weight: 700;
+}
+.table-toss td {
+    font-weight: 600;
+}
+
+
+
+
+/* clientpl */
+.heading-pl h3{
+    font-size: 23px;
+    color: #696969;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+}
+.text-pl{
+    display: block;
+    color: #696969 !important;
+    font-weight: 800;
+    text-align: center !important;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+/* cash sum */
+.panel-heading-cash {
+    padding: 8px 12px;
+    width: 100%;
+}
+.panel-heading-cash h3 {
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;    
+       display: block ;
+    text-align: center !important; 
+ 
+    width: 100%;
+}
+.table-heading-cash{
+    border-color: #e4e4e4;
+    border: 1px solid #e4e4e4;
+    background-color: #f1f1f1;
+    width: 100%
+}
+.table-heading-cash th{
+    color: #696969;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px !important;
+}
+.table > thead > tr > th {
+    border-bottom: 1px solid #ddd !important;
+}
+/*.table > thead:first-child > tr:first-child > th {
+    border-top: 0;
+}*/
+/* client acc*/
+.panel-heading-acc h2{
+    font-weight: 600;
+    text-align: center !important;
+}
+.panel-heading-acc {
+    width: 100%;
+    display: block;
+}
+/*deposit chips*/
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.modal-box {
+  width: 600px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+.modal-header {
+  padding: 12px 16px;
+  background: #f2f2f2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #696969;
+  letter-spacing: 1px;
+}
+.modal-header h3{
+     font-weight: 800!important;
+}
+.form-control-in{
+    width: 220px;
+    height: 30px;
+    border-radius: 2px;
+    border: 1px solid #C4C2C2;
+}
+.modal-close {
+  border: none;
+  background: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+.modal-body {
+  padding: 16px;
+}
+.modal-footer {
+  padding: 12px 16px;
+  width: 70px;
+  float: right;
+}
+.table-dep th {
+    color: #696969;
+    font-size: 16px !important;
+    font-weight: 700;
+    text-align: center;
+}
+.table-dep > tbody > tr > td {
+    color: #696969;
+    font-weight: 700 !important;
+    text-align: center;
+}
+/*totalbook*/
+.modal-box.modal-large {
+  width: 80vw;       
+  max-width: 1400px; 
+ max-height: 60vh;      
+  overflow: hidden; 
+}
+.table-total th{
+    color: #000;
+    font-weight: 700 ;
+    font-size: 16px !important;
+    text-align: left;
+    font-weight: 700;
+}
+.modal-header {
+  position: relative;
+  padding: 12px 16px;
+  background: #fff;
+}
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+.table-total,
+.table-total thead,
+.table-total th,
+.table-total td {
+  border: none !important;
+}
+.modal-header table {
+  margin-bottom: 0;
+}
+
+
+
+
+.panel-dashboard{
+    background-color: #fff;
+    color: #696969;
+    font-weight: 700;
+    font-size: 13px;
+    margin-top: 10px; 
+}
+.dashboard-icon{
+    font-weight: 800 !important;
+    font-size: 14px !important;
+    padding: 0px;
+}
+#vtab ul li a {
+    font-size: 13px;      
+    font-weight: 600;
+    padding: 4px 14px;     
+    display: inline-flex;  
+    align-items: center;
+    margin-right: 0px;
+}
+.dashboard-table th{
+    color: #696969;
+    font-weight: 800;
+    letter-spacing: 0px;
+    font-size: 12px;
+}
+.dashboard-table h5{
+    color:#000;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+}
+.dashboard-table td{
+    font-weight: 700 !important;
+}
+
+
 
 

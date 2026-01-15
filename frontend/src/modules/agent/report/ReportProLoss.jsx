@@ -22,9 +22,9 @@ export default function ReportProLoss() {
                                     <option value="5">TeenPatti</option>
                                 </select>&nbsp;
                                 From&nbsp;
-                                <input type="text" class="fromDate hasDatepicker" id="txtStartDate" placeholder="Start Date" />&nbsp;
+                                <input type="text" class="fromDate" id="txtStartDate" placeholder="Start Date" />&nbsp;
                                 To&nbsp;
-                                <input type="text" class="toDate hasDatepicker" id="txtEndDate" placeholder="End Date" />&nbsp;
+                                <input type="text" class="toDate" id="txtEndDate" placeholder="End Date" />&nbsp;
 
 
                                 <a href="javascript:void(0);" class="btn btn-success btn-success-pro" onclick="FilterPL();"><i class="fa fa-search" aria-hidden="true"></i>Filter</a>

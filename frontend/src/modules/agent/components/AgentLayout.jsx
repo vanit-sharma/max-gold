@@ -186,40 +186,53 @@ const AgentLayout = ({ children }) => {
 
                             <Nav variant="pills" activeKey="1">
                                 <Nav.Item>
-                                    <Nav.Link eventKey="1" href="#/home">
-                                        Dashboard
+                                    <Nav.Link eventKey="1">
+                                        <Link to="/agent/dashboard">Dashboard</Link>
                                     </Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="2" title="Item">
-                                        Match Book
+                                    <Nav.Link eventKey="2">
+                                        <Link to="/agent/matchmain">Match Book</Link>
                                     </Nav.Link>
                                 </Nav.Item>
 
                                 <Nav.Item>
                                     <Nav.Link eventKey="3" title="Item">
-                                        Block Market
+                                        <Link to="/agent/blockmarket">Block Market</Link>
                                     </Nav.Link>
                                 </Nav.Item>
                                 <NavDropdown title="Clients List" id="nav-dropdown">
-                                    <NavDropdown.Item eventKey="4.1">Add Clients</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="4.1">
+                                        <Link to="/agent/addclients">Add Clients</Link>
+                                    </NavDropdown.Item>
                                     <NavDropdown.Divider />
-                                    <NavDropdown.Item eventKey="4.2">Clients List</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="4.2">
+                                        <Link to="/agent/clientlist">Clients List</Link>
+                                    </NavDropdown.Item>
                                 </NavDropdown>
-
                                 <NavDropdown title="Report" id="nav-dropdown">
-                                    <NavDropdown.Item eventKey="4.1">Account Statament</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="4.1">
+                                        <Link to="/agent/accstate">Account Statament</Link>
+                                    </NavDropdown.Item>
                                     <NavDropdown.Divider />
-                                    <NavDropdown.Item eventKey="4.2">Chip Statement</NavDropdown.Item>
-                                    <NavDropdown.Item eventKey="4.2">Profit/Loss</NavDropdown.Item>
-                                    <NavDropdown.Item eventKey="4.2">Max Limit</NavDropdown.Item>
-                                    <NavDropdown.Item eventKey="4.2">Chip Summary</NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="4.2">
+                                        <Link to="/agent/chipstate"> Chip Statement</Link>
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="4.2">
+                                        <Link to="/agent/reportproloss"> Profit/Loss</Link>
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="4.2">
+                                        <Link to="/agent/maxlimit"> Max Limit</Link>
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Item eventKey="4.2">
+                                        <Link to="/agent/chipsum"> Chip Summary</Link>
+                                    </NavDropdown.Item>
 
                                 </NavDropdown>
 
                                 <Nav.Item>
                                     <Nav.Link eventKey="3" title="Item">
-                                        Profit/Loss
+                                        <Link to="/agent/marketprofitloss">Profit/Loss</Link>
                                     </Nav.Link>
                                 </Nav.Item>
 

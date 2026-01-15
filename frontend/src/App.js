@@ -47,6 +47,17 @@ import ChipState from "./modules/agent/report/ChipState.jsx";
 import ReportProLoss from "./modules/agent/report/ReportProLoss.jsx";
 import MaxLimit from "./modules/agent/report/MaxLimit.jsx";
 import ChipSum from "./modules/agent/report/ChipSum.jsx";
+import MatchBook from "./modules/agent/market_analysis/matchbook.jsx";
+import TossBook from "./modules/agent/market_analysis/tossbook.jsx";
+import ClientPL from "./modules/agent/market_analysis/client_pl.jsx";
+import CashSum from "./modules/agent/market_analysis/cashsum.jsx";
+import ClientAcc from "./modules/agent/market_analysis/clientacc.jsx";
+import DepositModal from "./modules/agent/market_analysis/depositchips.jsx";
+import Withdraw from "./modules/agent/market_analysis/withdrawchips.jsx";
+import DepositCash from "./modules/agent/market_analysis/depositcash.jsx";
+import WithdrawCash from "./modules/agent/market_analysis/withdrawcash.jsx";
+import Totalbook from "./modules/agent/market_analysis/totalbook.jsx";
+
 //import AgentProfile from "./modules/agent/profile/Profile.jsx";
 //import BookDetails from "./modules/agent/reports/book-details.jsx";
 //import AccountList from "./modules/agent/users/accounts-list.jsx";
@@ -116,10 +127,35 @@ function App() {
         />
 
         {/* Agent routes: Only for user_role !== 8 */}
-        <Route element={<RequireAuth />}>
-          <Route element={<OnlyAgentForNotRole8 />}>
+        <Route >
+          <Route >
             <Route path="/agent" element={<AgentDashboard />} />
             <Route path="/agent/dashboard" element={<AgentDashboard />} />
+
+             <Route path="/agent/matchmain" element={<MatchMain />} />
+            <Route path="/agent/blockmarket" element={<BlockMarket />} />
+            <Route path="/agent/addclients" element={<AddClients />} />
+            <Route path="/agent/clientlist" element={<ClientList />} />
+            <Route path="/agent/marketprofitloss" element={<MarketProfitLoss />} />
+            <Route path="/agent/accstate" element={<AccState />} />
+            <Route path="/agent/chipstate" element={<ChipState />} />
+            <Route path="/agent/reportproloss" element={<ReportProLoss />} />
+            <Route path="/agent/maxlimit" element={<MaxLimit />} />
+            <Route path="/agent/chipsum" element={<ChipSum />} />
+            <Route path="/agent/matchbook" element={<MatchBook />} />
+            <Route path="/agent/tossbook" element={<TossBook />} />
+            <Route path="/agent/totalbook" element={<Totalbook />} />
+            <Route path="agent/clientpl" element={<ClientPL />} />
+            <Route path="/agent/cashsum" element={<CashSum />} />
+            <Route path="/agent/clientacc" element={<ClientAcc />} />
+            <Route path="/depositchip" element={<DepositModal />} />
+            <Route path="/withdraw" element={<Withdraw />} />
+            <Route path="/depositcash" element={<DepositCash />} />
+            <Route path="/withdrawcash" element={<WithdrawCash />} />
+
+
+
+
             {/*<Route path="/agent/reset-password" element={<AgentProfile />} />
             <Route path="/agent/book-detail" element={<BookDetails />} />
             <Route path="/agent/accounts" element={<AccountList />} />
@@ -142,19 +178,7 @@ function App() {
             <Route path="/ProfitLoss" element={<ProfitLoss />} />
             <Route path="/ButtonValue" element={<ButtonValue />} />
             <Route path="/ChangePass" element={<ChangePass />} />
-            <Route path="/Rules" element={<Rules />} />
-            <Route path="/MatchMain" element={<MatchMain />} />
-            <Route path="/BlockMarket" element={<BlockMarket />} />
-            <Route path="/AddClients" element={<AddClients />} />
-            <Route path="/ClientList" element={<ClientList />} />
-            <Route path="/MarketProfitLoss" element={<MarketProfitLoss />} />
-            <Route path="/AccState" element={<AccState />} />
-            <Route path="/ChipState" element={<ChipState />} />
-            <Route path="/ReportProLoss" element={<ReportProLoss />} />
-            <Route path="/MaxLimit" element={<MaxLimit />} />
-            <Route path="/ChipSum" element={<ChipSum />} />
-
-            
+            <Route path="/Rules" element={<Rules />} /> 
           </Route>
         </Route>
       </Routes>
