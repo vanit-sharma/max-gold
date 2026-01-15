@@ -183,7 +183,7 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 }
 
 .header_wrp {
-    background-color: #ffb80c;
+    background-color: #ffb80c !important;
     width: 100%;
     -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
     box-shadow: 0 6px 12px rgba(0,0,0,.175);
@@ -4531,6 +4531,85 @@ table.table-toss td{
 .dashboard-table td{
     font-weight: 700 !important;
 }
+/* fullmarket */
+.mark-head {
+    background-color: white !important;
+    color: #000;
+    font-weight: 500;
+}
+.live-tv-heading {
+    background-color: #000 !important;
+    color: #fff !important;
+    padding: 10px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.match-header {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 15px;
+}
+.match-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+.match-header small {
+    display: block;
+    font-size: 12px;
+    color: #ccc;
+}
+#accordion2 {
+    margin-bottom: 0 !important;
+}
+.col-lg-4 .panel {
+    margin-bottom: 0 !important;
+}
+.panel-heading .btn-default {
+    background: #f0f0f0;
+    color: #000 !important;
+    border: 1px solid #666;
+    width: 120px;
+    letter-spacing: 0px;
+}
+.panel-heading .btn-default:hover {
+    background: #fff;
+    color: #000 !important;
+}
+
+th {
+    position: relative;
+}
+
+.tt-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #5dade2;
+    color: #fff;
+}
+.tt_thead {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 100%;
+
+    padding: 6px 4px;
+    box-sizing: border-box;
+
+    white-space: normal;
+    text-align: center;
+}
+.value-market{
+    color:#000 !important;
+}
+
+
 
 
 

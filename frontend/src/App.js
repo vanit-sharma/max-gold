@@ -57,7 +57,7 @@ import Withdraw from "./modules/agent/market_analysis/withdrawchips.jsx";
 import DepositCash from "./modules/agent/market_analysis/depositcash.jsx";
 import WithdrawCash from "./modules/agent/market_analysis/withdrawcash.jsx";
 import Totalbook from "./modules/agent/market_analysis/totalbook.jsx";
-
+import Fullmarket from "./modules/client/markets/full_market.jsx";
 //import AgentProfile from "./modules/agent/profile/Profile.jsx";
 //import BookDetails from "./modules/agent/reports/book-details.jsx";
 //import AccountList from "./modules/agent/users/accounts-list.jsx";
@@ -179,6 +179,7 @@ function App() {
             <Route path="/ButtonValue" element={<ButtonValue />} />
             <Route path="/ChangePass" element={<ChangePass />} />
             <Route path="/Rules" element={<Rules />} /> 
+            <Route path="/fullmarket" element={<Fullmarket />} /> 
           </Route>
         </Route>
       </Routes>
