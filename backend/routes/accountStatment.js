@@ -42,6 +42,9 @@ function parseEndExclusiveLondon(str) {
 
 // POST /accountStatement
 router.post("/", async (req, res) => {
+  console.log("REQ BODY:", req.body);
+
+  console.log("REQ USER:", req.user);
   // try {
   const user = req.user;
 
@@ -54,11 +57,11 @@ router.post("/", async (req, res) => {
   const tz = "Europe/London";
 
   let fromDate = moment
-    .tz(frm.split(" ")[0], "YYYY-MM-DD", tz)
+    .tz(frm?.split(" ")[0], "YYYY-MM-DD", tz)
     .startOf("day")
     .toDate();
   let toDate = moment
-    .tz(til.split(" ")[0], "YYYY-MM-DD", tz)
+    .tz(til?.split(" ")[0], "YYYY-MM-DD", tz)
     .endOf("day")
     .toDate();
     // let fromDate = moment(frm);

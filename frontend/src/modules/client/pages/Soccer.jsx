@@ -3,12 +3,26 @@ import axiosInstance from "../../../utils/axiosInstance";
 import moment from "moment";
 
 import ClientLayout from "../components/layout/ClientLayout";
+import EventRow from "../components/layout/EventRow";
 import { useSelector } from "react-redux";
 
 
 export default function Soccer() {
+    const eventsFromParent = useSelector((state) => state.event);
+    const [activeEventList, setActiveEventslist] = useState([]);
+    const getEvents = (events) => {
+        setActiveEventslist(events);
+    }
+    useEffect(() => {
+        const getEventsNew = async () => {
+            if (eventsFromParent !== "" && eventsFromParent.data !== null) {
+                await getEvents(eventsFromParent.data);
+            } else {
+            }
+        };
+        getEventsNew();
+    }, [eventsFromParent]);
     //const eventsFromParent = useSelector((state) => state.event);
-
 
     return (
         <ClientLayout>
@@ -30,7 +44,6 @@ export default function Soccer() {
                             </div>
 
                             <div class="col-sm-12">
-
                                 <div class="clearfix"></div>
 
                                 <div class="table-SportList grid_shadow">
@@ -53,8 +66,21 @@ export default function Soccer() {
 
 
                                             <div class="market_wrap">
+                                                <table className="market-table">
+                                                    <thead>
+                                                        <tr>
 
-                                                <div class="col-md-7 col-xs-12">
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <EventRow
+                                                            eventList={activeEventList}
+                                                            tabName="football"
+                                                        />
+                                                    </tbody>
+                                                </table>
+
+                                                {/*<div class="col-md-7 col-xs-12">
                                                     <a href="https://betmax.gold/Soccer/22/4/17983/35079740" class="markethover">
                                                         <h5 class="text_event"><span class="font-600 font-13">Soccer &gt; MI Emirates v Gulf Giants <small class="text-small">12/23/2025 7:30:00 PM</small></span>
                                                             <span id="ContentPlaceHolder1_Rpt_Multi_Market_lbl_MatchStatus_0" class="setinplayBtn ng-hide">In-Play</span>
@@ -87,7 +113,7 @@ export default function Soccer() {
                                                         <div class="col-md-6 col-xs-6 no-padding rate lay-rate-color PaddingRate text-center">
                                                             <span id="ContentPlaceHolder1_Rpt_Multi_Market_lbl_lay2_0">2.22</span></div>
                                                     </div>
-                                                </div>
+                                                </div>*/}
                                                 <div class="clearfix"></div>
                                             </div>
 

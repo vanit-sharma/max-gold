@@ -289,8 +289,8 @@ router.post("/user-betlist", auth, async (req, res) => {
   const catmid = req.params.id;
   let sports_type = req.body.sports_type;
   let bet_status = req.body.bet_status;
-  let from_date = req.body.from_date;
-  let to_date = req.body.to_date;
+  //let from_date = req.body.from_date;
+  //let to_date = req.body.to_date;
   let user_id = req.user._id;
   bet_status = parseInt(bet_status);
   // console.log("sports_type->",sports_type);
@@ -325,10 +325,10 @@ router.post("/user-betlist", auth, async (req, res) => {
     //obj.is_void = 1;
   }
 
-  const startDate = moment(from_date);
-  const endDate = moment(to_date);
+  //const startDate = moment(from_date);
+  //const endDate = moment(to_date);
 
-  obj.stmp = { $gte: startDate, $lte: endDate };
+  //obj.stmp = { $gte: startDate, $lte: endDate };
   console.log("obj->", obj);
 
   const bets_list = await BtBets.find(obj)

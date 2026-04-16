@@ -4,9 +4,24 @@ import moment from "moment";
 
 import ClientLayout from "../components/layout/ClientLayout";
 import { useSelector } from "react-redux";
+import EventRow from "../components/layout/EventRow";
 
 
 export default function Tennis() {
+    const eventsFromParent = useSelector((state) => state.event);
+    const [activeEventList, setActiveEventslist] = useState([]);
+    const getEvents = (events) => {
+        setActiveEventslist(events);
+    }
+    useEffect(() => {
+        const getEventsNew = async () => {
+            if (eventsFromParent !== "" && eventsFromParent.data !== null) {
+                await getEvents(eventsFromParent.data);
+            } else {
+            }
+        };
+        getEventsNew();
+    }, [eventsFromParent]);
     //const eventsFromParent = useSelector((state) => state.event);
 
 
@@ -30,7 +45,6 @@ export default function Tennis() {
                             </div>
 
                             <div class="col-sm-12">
-
                                 <div class="clearfix"></div>
 
                                 <div class="table-SportList grid_shadow">
@@ -39,61 +53,32 @@ export default function Tennis() {
                                         <div class="col-md-7 col-xs-12 hidden-xs" style={{ userSelect: "text" }}>
 
                                         </div>
-                                        <div class="col-md-5 col-xs-12 hidden-xs padding-top-5">
-                                            <div class="col-xs-12">
-                                                <div class="col-xs-4 text-center text-muted">1</div>
-                                                <div class="col-xs-4 text-center text-muted">X</div>
-                                                <div class="col-xs-4 text-center text-muted">2</div>
+                                        <div class="col-md-5">
+                                            <div class="row">
+                                                <div class="col-xs-4 text-center text-muted" style={{ fontSize: "13px" }}>1</div>
+                                                <div class="col-xs-3 text-center text-muted" style={{ fontSize: "13px" }}>X</div>
+                                                <div class="col-xs-4 text-center text-muted" style={{ fontSize: "13px" }}>2</div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="clearfix"></div>
                                     <div id="showdata">
                                         <div id="ContentPlaceHolder1_UpdatePanel1">
-
-
                                             <div class="market_wrap">
 
-                                                <div class="col-md-7 col-xs-12">
-                                                    <a href="https://betmax.gold/Tennis/22/4/17983/35079740" class="markethover">
-                                                        <h5 class="text_event"><span class="font-600 font-13">Tennis &gt; MI Emirates v Gulf Giants <small class="text-small">12/23/2025 7:30:00 PM</small></span>
-                                                            <span id="ContentPlaceHolder1_Rpt_Multi_Market_lbl_MatchStatus_0" class="setinplayBtn ng-hide">In-Play</span>
-                                                        </h5>
-                                                    </a>
+                                                <div class="col-md-12 col-xs-12" style={{ padding: "unset" }}>
+                                                    <table className="market-table" >
+                                                        <thead></thead>
+                                                        <tbody>
+                                                            <EventRow
+                                                                eventList={activeEventList}
+                                                                tabName="tennis"
+                                                            />
+                                                        </tbody>
+                                                    </table>
+                                                    <div class="clearfix"></div>
                                                 </div>
-                                                <div class="col-md-5 col-xs-12 no-border padding-top-5">
-
-                                                    <div class="col-xs-4 r-overlay">
-                                                        <div class="result-x">
-                                                            <span id="ContentPlaceHolder1_Rpt_Multi_Market_r1_0"></span></div>
-                                                        <div class="col-md-6 col-xs-6 no-padding rate back-rate-color PaddingRate text-center">
-                                                            <span id="ContentPlaceHolder1_Rpt_Multi_Market_lbl_back1_0">1.82</span></div>
-                                                        <div class="col-md-6 col-xs-6 no-padding rate lay-rate-color PaddingRate text-center">
-                                                            <span id="ContentPlaceHolder1_Rpt_Multi_Market_lbl_lay1_0">1.83</span></div>
-                                                    </div>
-                                                    <div class="col-xs-4 r-overlay">
-                                                        <div class="result-x">
-                                                            <span id="ContentPlaceHolder1_Rpt_Multi_Market_r3_0"></span></div>
-                                                        <div class="col-md-6 col-xs-6 no-padding rate back-rate-color PaddingRate text-center">
-                                                            <span id="ContentPlaceHolder1_Rpt_Multi_Market_lbl_backx_0">-</span></div>
-                                                        <div class="col-md-6 col-xs-6 no-padding rate lay-rate-color PaddingRate text-center">
-                                                            <span id="ContentPlaceHolder1_Rpt_Multi_Market_lbl_layx_0">-</span></div>
-                                                    </div>
-                                                    <div class="col-xs-4 r-overlay">
-                                                        <div class="result-x">
-                                                            <span id="ContentPlaceHolder1_Rpt_Multi_Market_r2_0"></span></div>
-                                                        <div class="col-md-6 col-xs-6 no-padding rate back-rate-color PaddingRate text-center">
-                                                            <span id="ContentPlaceHolder1_Rpt_Multi_Market_lbl_back2_0">2.2</span></div>
-                                                        <div class="col-md-6 col-xs-6 no-padding rate lay-rate-color PaddingRate text-center">
-                                                            <span id="ContentPlaceHolder1_Rpt_Multi_Market_lbl_lay2_0">2.22</span></div>
-                                                    </div>
-                                                </div>
-                                                <div class="clearfix"></div>
                                             </div>
-
-
-
-
                                         </div>
                                     </div>
                                 </div>

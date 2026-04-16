@@ -3,10 +3,24 @@ import axiosInstance from "../../../utils/axiosInstance";
 import moment from "moment";
 
 import ClientLayout from "../components/layout/ClientLayout";
+import EventRow from "../components/layout/EventRow";
 import { useSelector } from "react-redux";
 
-
 export default function Cricket() {
+    const eventsFromParent = useSelector((state) => state.event);
+    const [activeEventList, setActiveEventslist] = useState([]);
+    const getEvents = (events) => {
+        setActiveEventslist(events);
+    }
+    useEffect(() => {
+        const getEventsNew = async () => {
+            if (eventsFromParent !== "" && eventsFromParent.data !== null) {
+                await getEvents(eventsFromParent.data);
+            } else {
+            }
+        };
+        getEventsNew();
+    }, [eventsFromParent]);
     //const eventsFromParent = useSelector((state) => state.event);
 
 
@@ -30,7 +44,6 @@ export default function Cricket() {
                             </div>
 
                             <div class="col-sm-12">
-
                                 <div class="clearfix"></div>
 
                                 <div class="table-SportList grid_shadow">
@@ -50,50 +63,22 @@ export default function Cricket() {
                                     <div class="clearfix"></div>
                                     <div id="showdata">
                                         <div id="ContentPlaceHolder1_UpdatePanel1">
-
-
                                             <div class="market_wrap">
+                                                <table className="market-table">
+                                                    <thead>
+                                                        <tr>
 
-                                                <div class="col-md-7 col-xs-12">
-                                                    <a href="https://betmax.gold/Cricket/22/4/17983/35079740" class="markethover">
-                                                        <h5 class="text_event"><span class="font-600 font-13">Cricket &gt; MI Emirates v Gulf Giants <small class="text-small">12/23/2025 7:30:00 PM</small></span>
-                                                            <span id="ContentPlaceHolder1_Rpt_Multi_Market_lbl_MatchStatus_0" class="setinplayBtn ng-hide">In-Play</span>
-                                                        </h5>
-                                                    </a>
-                                                </div>
-                                                <div class="col-md-5 col-xs-12 no-border padding-top-5">
-
-                                                    <div class="col-xs-4 r-overlay">
-                                                        <div class="result-x">
-                                                            <span id="ContentPlaceHolder1_Rpt_Multi_Market_r1_0"></span></div>
-                                                        <div class="col-md-6 col-xs-6 no-padding rate back-rate-color PaddingRate text-center">
-                                                            <span id="ContentPlaceHolder1_Rpt_Multi_Market_lbl_back1_0">1.82</span></div>
-                                                        <div class="col-md-6 col-xs-6 no-padding rate lay-rate-color PaddingRate text-center">
-                                                            <span id="ContentPlaceHolder1_Rpt_Multi_Market_lbl_lay1_0">1.83</span></div>
-                                                    </div>
-                                                    <div class="col-xs-4 r-overlay">
-                                                        <div class="result-x">
-                                                            <span id="ContentPlaceHolder1_Rpt_Multi_Market_r3_0"></span></div>
-                                                        <div class="col-md-6 col-xs-6 no-padding rate back-rate-color PaddingRate text-center">
-                                                            <span id="ContentPlaceHolder1_Rpt_Multi_Market_lbl_backx_0">-</span></div>
-                                                        <div class="col-md-6 col-xs-6 no-padding rate lay-rate-color PaddingRate text-center">
-                                                            <span id="ContentPlaceHolder1_Rpt_Multi_Market_lbl_layx_0">-</span></div>
-                                                    </div>
-                                                    <div class="col-xs-4 r-overlay">
-                                                        <div class="result-x">
-                                                            <span id="ContentPlaceHolder1_Rpt_Multi_Market_r2_0"></span></div>
-                                                        <div class="col-md-6 col-xs-6 no-padding rate back-rate-color PaddingRate text-center">
-                                                            <span id="ContentPlaceHolder1_Rpt_Multi_Market_lbl_back2_0">2.2</span></div>
-                                                        <div class="col-md-6 col-xs-6 no-padding rate lay-rate-color PaddingRate text-center">
-                                                            <span id="ContentPlaceHolder1_Rpt_Multi_Market_lbl_lay2_0">2.22</span></div>
-                                                    </div>
-                                                </div>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <EventRow
+                                                            eventList={activeEventList}
+                                                            tabName="cricket"
+                                                        />
+                                                    </tbody>
+                                                </table>
                                                 <div class="clearfix"></div>
                                             </div>
-
-
-
-
                                         </div>
                                     </div>
                                 </div>

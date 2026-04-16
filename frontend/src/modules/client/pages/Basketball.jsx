@@ -4,9 +4,24 @@ import moment from "moment";
 
 import ClientLayout from "../components/layout/ClientLayout";
 import { useSelector } from "react-redux";
+import EventRow from "../components/layout/EventRow";
 
 
 export default function Basketball() {
+    const eventsFromParent = useSelector((state) => state.event);
+    const [activeEventList, setActiveEventslist] = useState([]);
+    const getEvents = (events) => {
+        setActiveEventslist(events);
+    }
+    useEffect(() => {
+        const getEventsNew = async () => {
+            if (eventsFromParent !== "" && eventsFromParent.data !== null) {
+                await getEvents(eventsFromParent.data);
+            } else {
+            }
+        };
+        getEventsNew();
+    }, [eventsFromParent]);
     //const eventsFromParent = useSelector((state) => state.event);
 
 
@@ -30,7 +45,19 @@ export default function Basketball() {
                             </div>
 
                             <div class="col-sm-12">
+                                <table>
+                                    <thead>
+                                        <tr>
 
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <EventRow
+                                            eventList={activeEventList}
+                                            tabName="basketball"
+                                        />
+                                    </tbody>
+                                </table>
                                 <div class="clearfix"></div>
 
                                 <div class="table-SportList grid_shadow">

@@ -8,6 +8,6 @@ const bzStakeSettingsSchema = new mongoose.Schema({
   collection: 'bz_stake_settings'
 });
 
-bzStakeSettingsSchema.index({ user_id: 1, type: 1, button_value: 1 }, { unique: true });
+//bzStakeSettingsSchema.index({ user_id: 1, type: 1, button_value: 1 }, { unique: true });
 
 module.exports = mongoose.model('BzStakeSettings', bzStakeSettingsSchema);

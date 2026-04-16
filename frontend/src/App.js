@@ -58,6 +58,14 @@ import DepositCash from "./modules/agent/market_analysis/depositcash.jsx";
 import WithdrawCash from "./modules/agent/market_analysis/withdrawcash.jsx";
 import Totalbook from "./modules/agent/market_analysis/totalbook.jsx";
 import Fullmarket from "./modules/client/markets/full_market.jsx";
+import EventRow from "./modules/client/components/layout/EventRow.jsx";
+import MatchOdd from "./modules/client/components/layout/MatchOdd.jsx";
+import Bookmaker from "./modules/client/components/layout/BookMaker.jsx";
+import BetfairFancy from "./modules/client/components/layout/BetfairFancy.jsx";
+import ViewMarket from "./modules/client/accounts/showMatchBet.jsx";
+import BetHistory from "./modules/client/accounts/BetHistory.jsx";
+
+
 //import AgentProfile from "./modules/agent/profile/Profile.jsx";
 //import BookDetails from "./modules/agent/reports/book-details.jsx";
 //import AccountList from "./modules/agent/users/accounts-list.jsx";
@@ -175,11 +183,20 @@ function App() {
             <Route path="/basketball" element={<Basketball />} />
             <Route path="/livecard" element={<Livecard />} />
             <Route path="/statement" element={<Statement />} />
+            <Route path="/matchbet" element={<ViewMarket />} />
             <Route path="/ProfitLoss" element={<ProfitLoss />} />
             <Route path="/ButtonValue" element={<ButtonValue />} />
             <Route path="/ChangePass" element={<ChangePass />} />
             <Route path="/Rules" element={<Rules />} /> 
-            <Route path="/fullmarket" element={<Fullmarket />} /> 
+            <Route path="/bethistory" element={<BetHistory />} /> 
+            <Route path="/market/:marketId" element={<Fullmarket />} /> 
+            <Route path="/eventrow" element={<EventRow />} /> 
+            <Route path="/matchodd" element={<MatchOdd />} /> 
+            <Route path="/bookmaker" element={<Bookmaker/>} />
+            <Route path="/betfairfancy" element={<BetfairFancy/>} />
+  
+        
+            
           </Route>
         </Route>
       </Routes>
