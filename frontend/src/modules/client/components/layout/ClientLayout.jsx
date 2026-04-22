@@ -4,18 +4,22 @@ import "../../../../assets/css/style.css";
 import "../../../../assets/css/bootstrap.css";
 import { useDispatch } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
+import Rules from "../../accounts/Rules";
 import {
   setEventData,
   setEventLoading,
   setEventError,
 } from "../../../../store/eventSlice";
 import axiosInstance from "../../../../utils/axiosInstance";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 const ClientLayout = ({ children }) => {
   const [displaySidebar, setDisplaySidebar] = useState(false);
   const [displaySubMenu, setDisplaySubMenu] = useState(false);
   const [displayTopRightMenu, setDisplayTopRightMenu] = useState(false);
   const isloader = false;
+  const [showRules, setShowRules] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -77,14 +81,16 @@ const ClientLayout = ({ children }) => {
             <div class="col-sm-7 col-xs-8">
               <div class="top_drop">
                 <ul class="dropdown-menu" style={{ display: "block", marginLeft: "550px", top: "-3px", backgroundColor: "#ffb80c", border: "none", verticalAlign: "middle" }} role="menu">
-                  <li class="dropdown"><a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                    <img src="https://betmax.gold/images/wallet.png" width="24" class="iconnav" />&nbsp;
-                    <span id="lbl_Wallet" class="wallet">0</span></a>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" onClick={(e) => e.preventDefault()}>
+                      <img src="https://betmax.gold/images/wallet.png" width="24" class="iconnav" />&nbsp;
+                      <span id="lbl_Wallet" class="wallet">0</span></a>
                     <ul class="dropdown-menu dash__m" role="menu">
-                      <li><a href="javascript:void(0)">
-                        <span class="pull-left wallet">Cr. Limit:</span>
-                        <span id="limit" class="wallet pull-right"></span>
-                      </a></li>
+                      <li>
+                        <a href="#" onClick={(e) => e.preventDefault()}>
+                          <span class="pull-left wallet">Cr. Limit:</span>
+                          <span id="limit" class="wallet pull-right"></span>
+                        </a></li>
                       <li><a href="https://betmax.gold/profit-loss">
                         <span class="pull-left">P/L:</span>
                         <span id="cash" class="wallet pull-right"></span>
@@ -94,23 +100,27 @@ const ClientLayout = ({ children }) => {
                         <span id="liability" class="wallet pull-right"></span>
                       </a></li>
 
-                      <li><a href="javascript:void(0)">
+                      <li><a href="#" onClick={(e) => e.preventDefault()}>
                         <span class="pull-left">Max Win:</span>
                         <span id="exposure" class="wallet pull-right"></span>
                       </a></li>
                     </ul>
                   </li>
-                  <li class="dropdown"><a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                    <img src="https://betmax.gold/images/usericon.png" width="24" class="iconnav" />&nbsp;<span id="lbl_username">pkr007</span></a><ul class="dropdown-menu dash__m" role="menu">
-
-                      <li><a href="https://betmax.gold/chipsummery">Account Statement</a></li>
-                      <li><a href="https://betmax.gold/casinoresults">Casino Report History</a></li>
-                      <li><a href="https://betmax.gold/profit-loss">Profit Loss</a></li>
-                      <li><a href="https://betmax.gold/liability">Bet History</a></li>
-                      <li><a href="https://betmax.gold/editstake">Set Button value</a></li>
-                      <li><a href="https://betmax.gold/chngpswd">Change Password</a></li>
-                      <li><a href="javascript:void(0)" onclick="ShowPopup()">Rules</a></li>
-                      <li><a href="https://betmax.gold/logout.aspx">Signout</a></li>
+                  <li className="dropdown">
+                    <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" onClick={(e) => e.preventDefault()}>
+                      <img src="https://betmax.gold/images/usericon.png" width="24" class="iconnav" />&nbsp;<span id="lbl_username">pkr007</span></a>
+                    <ul className="dropdown-menu dash__m" role="menu">
+                      <li><a className="dropdown-item" href="statement">Account Statement</a></li>
+                      <li><a className="dropdown-item" href="CasinoHistory">Casino Report History</a></li>
+                      <li><a className="dropdown-item" href="ProfitLoss">Profit Loss</a></li>
+                      <li><a className="dropdown-item" href="BetHistory">Bet History</a></li>
+                      <li><a className="dropdown-item" href="ButtonValue">Set Button value</a></li>
+                      <li><a className="dropdown-item" href="ChangePass">Change Password</a></li>
+                      <li><a className="dropdown-item" href="#" onClick={(e) => {
+                        e.preventDefault();
+                        setShowRules(true);
+                      }} >Rules</a></li>
+                      <li><a className="dropdown-item" href="#">Signout</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -187,7 +197,11 @@ const ClientLayout = ({ children }) => {
 
         {children}
       </div>
+      {showRules && (
+        <Rules onClose={() => setShowRules(false)} />
+      )}
     </div >
+
   );
 };
 

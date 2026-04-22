@@ -12,6 +12,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { jwtDecode } from "jwt-decode";
 
 import { useDispatch, useSelector } from "react-redux";
+
 import {
   startUserLoading,
   setUserData,
@@ -183,7 +184,7 @@ function App() {
             <Route path="/basketball" element={<Basketball />} />
             <Route path="/livecard" element={<Livecard />} />
             <Route path="/statement" element={<Statement />} />
-            <Route path="/matchbet" element={<ViewMarket />} />
+            <Route path="/matchbet/:match_id" element={<ViewMarket />} />
             <Route path="/ProfitLoss" element={<ProfitLoss />} />
             <Route path="/ButtonValue" element={<ButtonValue />} />
             <Route path="/ChangePass" element={<ChangePass />} />
@@ -194,6 +195,8 @@ function App() {
             <Route path="/matchodd" element={<MatchOdd />} /> 
             <Route path="/bookmaker" element={<Bookmaker/>} />
             <Route path="/betfairfancy" element={<BetfairFancy/>} />
+
+            <Route path="/account-statement" element={<Statement/>} />
   
         
             

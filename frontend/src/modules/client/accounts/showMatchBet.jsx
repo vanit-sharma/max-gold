@@ -35,7 +35,7 @@ export default function ViewMarket() {
     };
 
     //const { description, credit, debit, date } = state;
-
+    console.log("BETS DATA", bets);
     return (
         <ClientLayout>
             <div class="">

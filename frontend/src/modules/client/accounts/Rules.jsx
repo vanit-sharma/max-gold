@@ -5,7 +5,7 @@ import "../../../assets/css/style.css";
 export default function Rules() {
     const [showBox, setShowBox] = useState(true);
     return (
-        <ClientLayout>
+        <>
             <div className="modal-dialog agreement-modal" role="document">
                 <div class="modal-content">
                     {showBox && (
@@ -47,7 +47,7 @@ export default function Rules() {
                     <div class="clearfix"></div>
                 </div>
             </div>
-        </ClientLayout >
+        </ >
     );
 }
 

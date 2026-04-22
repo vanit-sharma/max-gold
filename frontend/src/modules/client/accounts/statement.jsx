@@ -604,10 +604,7 @@ export default function Statement() {
                                 <td >
                                     {getGameName(r.game_type)}/{r.description}&nbsp;&nbsp;&nbsp;
                                     <Link
-                                        to="/matchbet"
-                                        state={{
-                                            match_id: r.match_id
-                                        }}
+                                        to={`/matchbet/${r.match_id}`}
                                         className="btn btn-view"
                                     >
                                         View Market
